@@ -1,7 +1,12 @@
 package com.tvmemp.model;
 
+import java.util.Date;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -16,45 +21,75 @@ public class Employee_Assest {
 	@Column(name = "assestid")
 	private int assestid;
 
-	@Column(name = "laptop")
-	private String laptop;
+	private String assetmodule;
+	private Long phonenum;
+	private Date issuedate;
+	private Date returndate;
 
-	@Column(name = "headphone")
-	private String headphone;
+	@Enumerated(EnumType.STRING)
+	private AssetType assettypes;
 
-	@Column(name = "charger")
-	private String charger;
+	public Employee_Assest() {
 
-	public int getId() {
+	}
+	
+	@Enumerated(EnumType.STRING)
+	private EmployeeDescription employeedescription;
+
+	public int getAssestid() {
 		return assestid;
 	}
 
-	public void setId(int id) {
-		this.assestid = id;
+	public void setAssestid(int assestid) {
+		this.assestid = assestid;
 	}
 
-	public String getLaptop() {
-		return laptop;
+	public String getAssetmodule() {
+		return assetmodule;
 	}
 
-	public void setLaptop(String laptop) {
-		this.laptop = laptop;
+	public void setAssetmodule(String assetmodule) {
+		this.assetmodule = assetmodule;
 	}
 
-	public String getHeadphone() {
-		return headphone;
+	public Long getPhonenum() {
+		return phonenum;
 	}
 
-	public void setHeadphone(String headphone) {
-		this.headphone = headphone;
+	public void setPhonenum(Long phonenum) {
+		this.phonenum = phonenum;
 	}
 
-	public String getCharger() {
-		return charger;
+	public Date getIssuedate() {
+		return issuedate;
 	}
 
-	public void setCharger(String charger) {
-		this.charger = charger;
+	public void setIssuedate(Date issuedate) {
+		this.issuedate = issuedate;
+	}
+
+	public Date getReturndate() {
+		return returndate;
+	}
+
+	public void setReturndate(Date returndate) {
+		this.returndate = returndate;
+	}
+
+	public AssetType getAssettypes() {
+		return assettypes;
+	}
+
+	public void setAssettypes(AssetType assettypes) {
+		this.assettypes = assettypes;
+	}
+
+	public EmployeeDescription getEmployeedescription() {
+		return employeedescription;
+	}
+
+	public void setEmployeedescription(EmployeeDescription employeedescription) {
+		this.employeedescription = employeedescription;
 	}
 
 }
