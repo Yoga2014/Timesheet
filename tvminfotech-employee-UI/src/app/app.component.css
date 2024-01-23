@@ -1,0 +1,15 @@
+.company-heading {
+    text-align: center;
+  }
+  
+  .company-heading h1 {
+    color: #3498db; 
+  }
+  
+  .company-heading p {
+    color: #555;
+  }
+
+  :host {
+    overflow: hidden;
+  }

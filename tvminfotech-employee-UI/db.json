@@ -1,0 +1,211 @@
+{
+  "employees": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "position": "Software Engineer",
+      "address": {
+        "street": "123 Main St",
+        "city": "Anytown",
+        "state": "CA",
+        "zip": "12345"
+      },
+      "photo": "https://images.pexels.com/photos/859265/pexels-photo-859265.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "details": "John Doe is a skilled software engineer with a passion for building innovative solutions. He has a strong background in full-stack development and has successfully contributed to various projects. John is known for his problem-solving skills and teamwork."
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "position": "Product Manager",
+      "address": {
+        "street": "456 Oak St",
+        "city": "Anycity",
+        "state": "NY",
+        "zip": "54321"
+      },
+      "photo": "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "details": "Jane Smith is an experienced product manager with a proven track record of delivering successful products to market. She excels in product strategy, user experience design, and cross-functional collaboration. Jane is passionate about creating products that meet user needs and drive business growth."
+    },
+    {
+      "id": "3",
+      "name": "Jane Smith",
+      "position": "Product Manager",
+      "address": {
+        "street": "456 Oak St",
+        "city": "Anycity",
+        "state": "NY",
+        "zip": "54321"
+      },
+      "photo": "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "details": "Jane Smith is an experienced product manager with a proven track record of delivering successful products to market. She excels in product strategy, user experience design, and cross-functional collaboration. Jane is passionate about creating products that meet user needs and drive business growth."
+    },
+    {
+      "id": "4",
+      "name": "Jane Smith",
+      "position": "Product Manager",
+      "address": {
+        "street": "456 Oak St",
+        "city": "Anycity",
+        "state": "NY",
+        "zip": "54321"
+      },
+      "photo": "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "details": "Jane Smith is an experienced product manager with a proven track record of delivering successful products to market. She excels in product strategy, user experience design, and cross-functional collaboration. Jane is passionate about creating products that meet user needs and drive business growth."
+    },
+    {
+      "id": "5",
+      "name": "Jane Smith",
+      "position": "Product Manager",
+      "address": {
+        "street": "456 Oak St",
+        "city": "Anycity",
+        "state": "NY",
+        "zip": "54321"
+      },
+      "photo": "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "details": "Jane Smith is an experienced product manager with a proven track record of delivering successful products to market. She excels in product strategy, user experience design, and cross-functional collaboration. Jane is passionate about creating products that meet user needs and drive business growth."
+    },
+    {
+      "id": "6",
+      "name": "Jane Smith",
+      "position": "Product Manager",
+      "address": {
+        "street": "456 Oak St",
+        "city": "Anycity",
+        "state": "NY",
+        "zip": "54321"
+      },
+      "photo": "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "details": "Jane Smith is an experienced product manager with a proven track record of delivering successful products to market. She excels in product strategy, user experience design, and cross-functional collaboration. Jane is passionate about creating products that meet user needs and drive business growth."
+    },
+    {
+      "id": "7",
+      "name": "Jane Smith",
+      "position": "Product Manager",
+      "address": {
+        "street": "456 Oak St",
+        "city": "Anycity",
+        "state": "NY",
+        "zip": "54321"
+      },
+      "photo": "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "details": "Jane Smith is an experienced product manager with a proven track record of delivering successful products to market. She excels in product strategy, user experience design, and cross-functional collaboration. Jane is passionate about creating products that meet user needs and drive business growth."
+    },
+    {
+      "id": "8",
+      "name": "Jane Smith",
+      "position": "Product Manager",
+      "address": {
+        "street": "456 Oak St",
+        "city": "Anycity",
+        "state": "NY",
+        "zip": "54321"
+      },
+      "photo": "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "details": "Jane Smith is an experienced product manager with a proven track record of delivering successful products to market. She excels in product strategy, user experience design, and cross-functional collaboration. Jane is passionate about creating products that meet user needs and drive business growth."
+    },
+    {
+      "id": "9",
+      "name": "Jane Smith",
+      "position": "Product Manager",
+      "address": {
+        "street": "456 Oak St",
+        "city": "Anycity",
+        "state": "NY",
+        "zip": "54321"
+      },
+      "photo": "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "details": "Jane Smith is an experienced product manager with a proven track record of delivering successful products to market. She excels in product strategy, user experience design, and cross-functional collaboration. Jane is passionate about creating products that meet user needs and drive business growth."
+    },
+    {
+      "id": "10",
+      "name": "Jane Smith",
+      "position": "Product Manager",
+      "address": {
+        "street": "456 Oak St",
+        "city": "Anycity",
+        "state": "NY",
+        "zip": "54321"
+      },
+      "photo": "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "details": "Jane Smith is an experienced product manager with a proven track record of delivering successful products to market. She excels in product strategy, user experience design, and cross-functional collaboration. Jane is passionate about creating products that meet user needs and drive business growth."
+    },
+    {
+      "id": 0,
+      "name": "",
+      "position": "",
+      "address": {
+        "street": "",
+        "city": "",
+        "state": "",
+        "zip": ""
+      },
+      "photo": "",
+      "details": ""
+    },
+    {
+      "id": "f7fc"
+    },
+    {
+      "id": "1c4c"
+    },
+    {
+      "id": "4447"
+    }
+  ],
+  "assets": [
+    {
+      "employeeId": 1,
+      "name": "John Doe",
+      "position": "Software Engineer",
+      "assetName": "Laptop",
+      "assetValue": "$1200",
+      "id": "9e55"
+    },
+    {
+      "employeeId": 2,
+      "name": "John Doe",
+      "position": "Software Engineer",
+      "assetName": "Monitor",
+      "assetValue": "$300",
+      "id": "b297"
+    },
+    {
+      "employeeId": 3,
+      "name": "John Doe",
+      "position": "Software Engineer",
+      "assetName": "Tablet",
+      "assetValue": "$800",
+      "id": "ede4"
+    },
+    {
+      "employeeId": 4,
+      "name": "John Doe",
+      "position": "Software Engineer",
+      "assetName": "Desktop Computer",
+      "assetValue": "$1500",
+      "id": "c7d7"
+    },
+    {
+      "employeeId": 5,
+      "name": "John Doe",
+      "position": "Software Engineer",
+      "assetName": "Desktop Computer",
+      "assetValue": "$1500",
+      "id": "8c7e"
+    },
+    {
+      "employeeId": 6,
+      "name": "John Doe",
+      "position": "Software Engineer",
+      "assetName": "Desktop Computer",
+      "assetValue": "$1500",
+      "id": "e9ca"
+    }
+  ],
+  "attendance": [
+    { "id": 1, "employeeId": "001", "date": "2022-01-01", "checkinTime": "09:00:00","checkoutTime": "06:30:00", "attendanceType": "WFO" },
+    { "id": 2, "employeeId": "002", "date": "2022-01-01", "checkinTime": "09:15:00","checkoutTime": "06:15:00", "attendanceType": "WFO" },
+    { "id": 3, "employeeId": "001", "date": "2022-01-02", "checkinTime": "09:30:00","checkoutTime": "07:00:00", "attendanceType": "WFH" }
+  ]
+}

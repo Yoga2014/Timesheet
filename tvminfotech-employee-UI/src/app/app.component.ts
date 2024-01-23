@@ -1,14 +1,26 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { EmployeeService } from './employee.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'tvminfotech-employee-UI';
+  title = 'tvm';
+  navView = false;
+  href = '';
+  constructor(private emp: EmployeeService,
+    private router: Router){ }
+
+ ngDoCheck(){
+  this.href = this.router.url;
+  console.log('href',this.href);
+  if(this.href != '/'){
+    this.navView = this.emp.loginClick;
+  }else{
+    this.navView = false
+  }
+ }
 }
