@@ -1,0 +1,38 @@
+<div>
+    <h2>Employee Attendance</h2>
+    <form [formGroup]="attendanceForm" (ngSubmit)="markAttendance()">
+      <label for="employeeId">Select Employee:</label>
+      <select id="employeeId" formControlName="employeeId">
+        <option *ngFor="let employee of employees" [value]="employee.id">{{ employee.name }}</option>
+      </select>
+  
+      <label for="attendanceType">Select Attendance Type:</label>
+      <select id="attendanceType" formControlName="attendanceType">
+        <option *ngFor="let option of attendanceOptions" [value]="option">{{ option }}</option>
+      </select>
+  
+      <button type="submit">Submit</button>
+    </form>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>Employee ID</th>
+          <th>Date</th>
+          <th>Check-in</th>
+          <th>Check-out</th>
+          <th>Attendance Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let record of employees">
+          <td>{{ record.employeeId }}</td>
+          <td>{{  record.date | date:'yyyy-MM-dd' }}</td>
+          <td>{{ record.checkIn | date: 'shortTime' }}</td>
+          <td>{{ record.checkOut ? (record.checkOut | date: 'shortTime') : 'Not checked out' }}</td>
+          <td>{{ record.attendanceType }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

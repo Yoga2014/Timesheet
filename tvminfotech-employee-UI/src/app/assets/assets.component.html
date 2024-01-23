@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="employee-list">
+      <h2>Employee List</h2>
+      <ul>
+        <li *ngFor="let employee of assetDetails" (click)="selectEmployee(employee)">
+          {{ employee.name }}-{{ employee.position }}
+        </li>
+      </ul>
+    </div>
+    <div class="employee-details">
+      <h2>Employee Asset Details</h2>
+      <div *ngIf="selectedEmployee.employeeId; else noSelection">
+        <p><strong>Name:</strong> {{ selectedEmployee.name }}</p>
+        <p><strong>Position:</strong> {{ selectedEmployee.position }}</p>
+        <!-- <p><strong>Department:</strong> {{ selectedEmployee.department }}</p> -->
+        <ul>
+          <li *ngFor="let detail of assetDetails">
+            {{ detail.assetName }}: {{ detail.assetValue }}
+          </li>
+        </ul>
+      </div>
+      <ng-template #noSelection>
+        <p>No employee selected.</p>
+      </ng-template>
+    </div>
+  </div>
+  

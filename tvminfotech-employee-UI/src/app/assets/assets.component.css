@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+  }
+  
+  .employee-list, .employee-details {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .employee-list {
+    border-right: 1px solid #ccc;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  li {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  li:hover {
+    background-color: #f0f0f0;
+  }
+  
