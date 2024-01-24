@@ -1,3 +1,11 @@
+
+SWAGGER URL: http://localhost:8080/swagger-ui/index.html
+
+H2 DB console URL:http://localhost:8080/h2-console
+H2 user name: sa
+H2 password: password
+H2 DB Url: jdbc:h2:mem:tvm_employee
+
 1.Save Employee Details API:
 http://localhost:8082/tvm/saveEmployee (This API is used to save employee details)
 

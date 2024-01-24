@@ -40,8 +40,8 @@ public class TvmEmployeeController {
 	}
 
 	@GetMapping("/getAllEmployee")
-	public List<TvmEmployee> getAllEmployee(TvmEmployee employee) {
-		return ser.getAllEmp(employee);
+	public List<TvmEmployee> getAllEmployee() {
+		return ser.getAllEmp();
 	}
 
 	@GetMapping("/getAllEmployee/{salary}")

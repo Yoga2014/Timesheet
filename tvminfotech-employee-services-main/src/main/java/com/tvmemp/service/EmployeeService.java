@@ -14,7 +14,7 @@ public interface EmployeeService {
 
 	public Optional<TvmEmployee> getEmp(Integer id);
 
-	public List<TvmEmployee> getAllEmp(TvmEmployee employee);
+	public List<TvmEmployee> getAllEmp();
 
 	public TvmEmployee updateEmployee(Integer id, TvmEmployee employee);
 

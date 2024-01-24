@@ -40,7 +40,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	// getAll
 	@Override
-	public List<TvmEmployee> getAllEmp(TvmEmployee employee) {
+	public List<TvmEmployee> getAllEmp() {
 		return repo.findAll();
 	}
 
