@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.tvmemp.model.TvmEmployee;
 import com.tvmemp.service.EmployeeService;
 
+import io.swagger.v3.oas.annotations.Operation;
+
 // TVM Employee Controller Class
 
 @RestController
@@ -26,6 +28,7 @@ public class TvmEmployeeController {
 
 	@Autowired
 	private EmployeeService ser;
+
 
 	@PostMapping("/saveEmployee")
 	public TvmEmployee postEmployee(@RequestBody TvmEmployee employee) {
