@@ -1,6 +1,7 @@
 package com.tvmemp.controller;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +15,7 @@ import com.tvmemp.service.AuthenticationService;
 import com.tvmemp.service.JwtService;
 
 @RequestMapping("/auth")
+@CrossOrigin("*")
 @RestController
 public class AuthenticationController {
     private final JwtService jwtService;
