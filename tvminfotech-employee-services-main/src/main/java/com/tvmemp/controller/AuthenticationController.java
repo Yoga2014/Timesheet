@@ -13,6 +13,8 @@ import com.tvmemp.responses.LoginResponse;
 import com.tvmemp.service.AuthenticationService;
 import com.tvmemp.service.JwtService;
 
+
+
 @RequestMapping("/auth")
 @RestController
 public class AuthenticationController {
@@ -20,11 +22,21 @@ public class AuthenticationController {
     
     private final AuthenticationService authenticationService;
 
+    /**
+     * 
+     * @param jwtService
+     * @param authenticationService
+     */
     public AuthenticationController(JwtService jwtService, AuthenticationService authenticationService) {
         this.jwtService = jwtService;
         this.authenticationService = authenticationService;
     }
 
+    /**
+     * 
+     * @param registerUserDto
+     * @return
+     */
     @PostMapping("/signup")
     public ResponseEntity<User> register(@RequestBody RegisterUserDto registerUserDto) {
         User registeredUser = authenticationService.signup(registerUserDto);
@@ -32,6 +44,11 @@ public class AuthenticationController {
         return ResponseEntity.ok(registeredUser);
     }
 
+    /**
+     * 
+     * @param loginUserDto
+     * @return
+     */
     @PostMapping("/login")
     public ResponseEntity<LoginResponse> authenticate(@RequestBody LoginUserDto loginUserDto) {
         User authenticatedUser = authenticationService.authenticate(loginUserDto);

@@ -13,6 +13,11 @@ public interface EmployeeLogRepo extends JpaRepository<EmployeeLog, Integer> {
 	
 	//Getting Log details using log Id
 
+	/**
+	 * 
+	 * @param logid
+	 * @return
+	 */
 	@Query(value = "SELECT el.loginid,el.logindate,el.logintime,el.employeeid,eo.logid,eo.logoutdate,eo.logouttime,eo.employeeid "
 			+ "FROM empoyeelog el INNER JOIN emplogout eo "
 			+ "ON el.employeeid=eo.employeeid where eo.logid=:logid", nativeQuery = true)

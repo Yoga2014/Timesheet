@@ -10,5 +10,10 @@ import com.tvmemp.model.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
 
+	/**
+	 * 
+	 * @param email
+	 * @return
+	 */
 	Optional<User> findByEmail(String email);
 }

@@ -18,6 +18,12 @@ public class AuthenticationService {
     
     private final AuthenticationManager authenticationManager;
 
+    /**
+     * 
+     * @param userRepository
+     * @param authenticationManager
+     * @param passwordEncoder
+     */
     public AuthenticationService(
         UserRepository userRepository,
         AuthenticationManager authenticationManager,
@@ -27,7 +33,11 @@ public class AuthenticationService {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
     }
-
+/**
+ * 
+ * @param input
+ * @return
+ */
     public User signup(RegisterUserDto input) {
         User user = new User();
                 user.setFullName(input.getFullName());
@@ -36,7 +46,13 @@ public class AuthenticationService {
 
         return userRepository.save(user);
     }
-
+    
+    
+/**
+ * 
+ * @param input
+ * @return
+ */
     public User authenticate(LoginUserDto input) {
         authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(

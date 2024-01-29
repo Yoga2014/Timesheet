@@ -17,25 +17,49 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class JwtService {
+	
     @Value("${security.jwt.secret-key}")
     private String secretKey;
 
     @Value("${security.jwt.expiration-time}")
     private long jwtExpiration;
 
+    /**
+     * 
+     * @param token
+     * @return
+     */
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
     }
 
+    /**
+     * 
+     * @param <T>
+     * @param token
+     * @param claimsResolver
+     * @return
+     */
     public <T> T extractClaim(String token, Function<Claims, T> claimsResolver) {
         final Claims claims = extractAllClaims(token);
         return claimsResolver.apply(claims);
     }
 
+    /**
+     * 
+     * @param userDetails
+     * @return
+     */
     public String generateToken(UserDetails userDetails) {
         return generateToken(new HashMap<>(), userDetails);
     }
 
+    /**
+     * 
+     * @param extraClaims
+     * @param userDetails
+     * @return
+     */
     public String generateToken(Map<String, Object> extraClaims, UserDetails userDetails) {
         return buildToken(extraClaims, userDetails, jwtExpiration);
     }
@@ -59,19 +83,40 @@ public class JwtService {
                 .compact();
     }
 
+    /**
+     * 
+     * @param token
+     * @param userDetails
+     * @return
+     */
     public boolean isTokenValid(String token, UserDetails userDetails) {
         final String username = extractUsername(token);
         return (username.equals(userDetails.getUsername())) && !isTokenExpired(token);
     }
 
+    /**
+     * 
+     * @param token
+     * @return
+     */
     private boolean isTokenExpired(String token) {
         return extractExpiration(token).before(new Date());
     }
 
+    /**
+     * 
+     * @param token
+     * @return
+     */
     private Date extractExpiration(String token) {
         return extractClaim(token, Claims::getExpiration);
     }
 
+    /**
+     * 
+     * @param token
+     * @return
+     */
     private Claims extractAllClaims(String token) {
         return Jwts
                 .parserBuilder()
@@ -81,6 +126,10 @@ public class JwtService {
                 .getBody();
     }
 
+    /**
+     * 
+     * @return
+     */
     private Key getSignInKey() {
         byte[] keyBytes = Decoders.BASE64.decode(secretKey);
         return Keys.hmacShaKeyFor(keyBytes);
