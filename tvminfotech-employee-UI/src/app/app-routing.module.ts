@@ -5,13 +5,13 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { AssetsComponent } from './assets/assets.component';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
-import { SignupComponent } from './signup/signup.component';
+// import { SignupComponent } from './signup/signup.component';
 import { AttendanceComponent } from './attendance/attendance.component';
 
 const routes: Routes = [
   // { path: '', redirectTo: '/navbar', pathMatch: 'full' },
   {path:'',component:LoginComponent},
-  {path:'signup',component:SignupComponent},
+  // {path:'signup',component:SignupComponent},
   {path:'home',component:HomeComponent},
   {path:'navbar',component:NavbarComponent},
   {path:'attendance',component:AttendanceComponent},
