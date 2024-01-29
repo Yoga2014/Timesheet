@@ -132,7 +132,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	@Override
 	public List<Map<String, Object>> getByNameWithLogin(String empf) {
-		// TODO Auto-generated method stub
 		return repo.getByNameLoginDetails(empf);
 	}
 
@@ -141,10 +140,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 		
 		return repo.getByEmpIdLogio(id);
 	}
-	
 
-
-	
 
 	
 

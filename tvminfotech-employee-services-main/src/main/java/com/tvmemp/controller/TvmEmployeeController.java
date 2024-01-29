@@ -5,7 +5,6 @@ import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -90,7 +89,7 @@ public class TvmEmployeeController {
 	    }
 	 
 	 @GetMapping("/getEmployeeByAssestlaptop/{laptop}")
-	    public List<TvmEmployee> getEmployeeByAssestId(@PathVariable("laptop") String laptop) {
+	    public List<TvmEmployee> getEmployeeByAssestlaptop(@PathVariable("laptop") String laptop) {
 	        return ser.findByAssestlaptop(laptop);
 	    
 	 }
@@ -109,9 +108,11 @@ public class TvmEmployeeController {
 		public List<Map<String, Object>> getEmployeeNameWithInfoLogin(@PathVariable("employeefirstname") String empf){
 			return ser.getByNameWithLogin(empf);
 		}
-		
+
 		@GetMapping("/getbyedlog/{employeeid}")
 		public List<Map<String, Object>> getByemployeeIdLog(@PathVariable("employeeid") Integer id){
 			return ser.getByEmpIdWithLogin(id);
 		}
+		
+
 }
