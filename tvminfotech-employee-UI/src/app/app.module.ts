@@ -12,7 +12,11 @@ import {HttpClientModule} from '@angular/common/http';
 import { SignupComponent } from './signup/signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AttendanceComponent } from './attendance/attendance.component';
-
+import { EmployeePopupComponent } from './employee-popup/employee-popup.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -23,14 +27,16 @@ import { AttendanceComponent } from './attendance/attendance.component';
     AssetsComponent,
     EmployeeDetailComponent,
     SignupComponent,
-    AttendanceComponent
+    AttendanceComponent,
+    EmployeePopupComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule
+    FormsModule,MatInputModule,
+    ReactiveFormsModule,MatButtonModule,MatDialogModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

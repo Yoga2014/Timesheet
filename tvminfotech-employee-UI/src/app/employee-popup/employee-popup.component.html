@@ -1,0 +1,49 @@
+<div class="popup-container container">
+  
+    <!-- Add your content here -->
+    <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" class="form-control" id="name" formControlName="name">
+        </div>
+        <div class="mb-3">
+            <label for="position" class="form-label">Position:</label>
+            <input type="text" class="form-control" id="position" formControlName="position">
+        </div>
+        <div class="mb-3">
+            <label for="joiningdate" class="form-label">Joining Date:</label>
+            <input type="text" class="form-control" id="joiningdate" formControlName="joiningdate">
+        </div>
+        <!-- Repeat similar blocks for other form controls -->
+        <div formGroupName="address" class="mb-3">
+            <label for="street" class="form-label">Street:</label>
+            <input type="text" class="form-control" id="street" formControlName="street">
+        </div>
+        <div formGroupName="address" class="mb-3">
+            <label for="city" class="form-label">City:</label>
+            <input type="text" class="form-control" id="city" formControlName="city">
+        </div>
+        <div formGroupName="address" class="mb-3">
+            <label for="state" class="form-label">State:</label>
+            <input type="text" class="form-control" id="state" formControlName="state">
+        </div>
+        <div formGroupName="address" class="mb-3" >
+            <label for="zip" class="form-label">ZIP Code:</label>
+            <input type="text" class="form-control" id="zip" formControlName="zip">
+        </div>
+        
+        <div class="mb-3" >
+            <label for="photo" class="form-label">Photo:</label>
+            
+            <input type="file" id="name"  accept=".png, .jpg, .jpeg" formControlName="photo" #fileInput (change)="uploadFile($event)" />
+          
+          </div>
+        <div class="mb-3" >
+            <label for="details" class="form-label">Details:</label>
+            <input type="text" class="form-control" id="details" formControlName="details">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="button" class="btn btn-secondary" (click)="close()">Close</button>
+    </form>
+  </div>
+  
