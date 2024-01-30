@@ -1,3 +1,5 @@
+
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -6,30 +8,14 @@ import { Injectable } from '@angular/core';
 export class AttendanceService {
 
   private attendanceData: any[] = [];
+   constructor(private http:HttpClient){}
 
-  getAttendanceData(): any[] {
-    return this.attendanceData;
+   postmethod(data:any){
+    return this.http.post('http://localhost:3000/attendance/', data);
   }
-
-  markAttendance(employeeId: number, attendanceType: string): void {
-    const existingRecordIndex = this.attendanceData.findIndex(
-      (record) => record.employeeId === employeeId && !record.checkOut
-    );
-
-    if (existingRecordIndex !== -1) {
-    
-      this.attendanceData[existingRecordIndex].checkOut = new Date();
-      this.attendanceData[existingRecordIndex].attendanceType = attendanceType;
-    } else {
-      
-      const attendanceRecord = {
-        employeeId,
-        date: new Date().toLocaleDateString(),
-        checkIn: new Date(),
-        checkOut: null,
-        attendanceType,
-      };
-      this.attendanceData.push(attendanceRecord);
-    }
-  }
+  
+   getmethod(){
+  return this.http.get('http://localhost:3000/attendance');
 }
+
+  }

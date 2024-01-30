@@ -17,6 +17,10 @@ import com.tvmemp.repository.UserRepository;
 public class ApplicationConfiguration {
     private final UserRepository userRepository;
 
+    /**
+     * 
+     * @param userRepository
+     */
     public ApplicationConfiguration(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
