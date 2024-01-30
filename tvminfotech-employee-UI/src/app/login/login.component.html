@@ -67,8 +67,8 @@
           <h2 class="mb-4" style="color: aliceblue;">Login</h2>
           <form>
             <div class="form-group">
-              <label for="username"  style="color: aliceblue;">Username:</label><br>
-              <input type="text" class="form-control formField" id="username" placeholder="Enter your username">
+              <label for="username"  style="color: aliceblue; ">Username:</label><br>
+              <input  type="text" class="form-control formField" id="username" placeholder="Enter your username">
             </div>
             <div class="form-group">
               <label for="password"  style="color: aliceblue;">Password:</label><br>
@@ -90,42 +90,42 @@
   <h2 class="mb-1" style="color: aliceblue;">Signup</h2>
   <form>
     <div class="form-group">
-      <label for="name"  style="color: aliceblue;">First Name:</label>
-      <input type="text" class="form-control" id="name" [(ngModel)]="newEmployee.name" placeholder="Enter your name">
+      <label  for="name"  style="color: aliceblue;">First Name:</label>
+      <input style="color: aliceblue;"  type="text" class="form-control" id="name" [(ngModel)]="newEmployee.name" placeholder="Enter your name">
     </div>
     <div class="form-group">
       <label for="position"  style="color: aliceblue;">Last Name:</label>
-      <input type="text" class="form-control" id="position" [(ngModel)]="newEmployee.position" placeholder="Enter your position">
+      <input style="color: aliceblue;" type="text" class="form-control" id="position" [(ngModel)]="newEmployee.position" placeholder="Enter your position">
     </div>
     <div class="form-group">
       <label for="street"  style="color: aliceblue;">Street:</label>
-      <input type="text" class="form-control" id="street" [(ngModel)]="newEmployee.address.street" placeholder="Enter your street">
+      <input style="color: aliceblue;" type="text" class="form-control" id="street" [(ngModel)]="newEmployee.address.street" placeholder="Enter your street">
     </div>
     <div class="form-group">
       <label for="city"  style="color: aliceblue;">City:</label>
-      <input type="text" class="form-control" id="city" [(ngModel)]="newEmployee.address.city" placeholder="Enter your city">
+      <input style="color: aliceblue;" type="text" class="form-control" id="city" [(ngModel)]="newEmployee.address.city" placeholder="Enter your city">
     </div>
     <div class="form-group">
       <label for="state"  style="color: aliceblue;">State:</label>
-      <input type="text" class="form-control" id="state" [(ngModel)]="newEmployee.address.state" placeholder="Enter your state">
+      <input style="color: aliceblue;" type="text" class="form-control" id="state" [(ngModel)]="newEmployee.address.state" placeholder="Enter your state">
     </div>
     <div class="form-group">
       <label for="zip"  style="color: aliceblue;">Zip:</label>
-      <input type="text" class="form-control" id="zip" [(ngModel)]="newEmployee.address.zip" placeholder="Enter your zip">
+      <input style="color: aliceblue;" type="text" class="form-control" id="zip" [(ngModel)]="newEmployee.address.zip" placeholder="Enter your zip">
     </div>
     <div class="form-group">
       <label for="photo"  style="color: aliceblue;">Photo URL:</label>
-      <input type="text" class="form-control" id="photo" [(ngModel)]="newEmployee.photo" placeholder="Enter your photo URL">
+      <input style="color: aliceblue;" type="text" class="form-control" id="photo" [(ngModel)]="newEmployee.photo" placeholder="Enter your photo URL">
     </div>
     <div class="form-group">
       <label for="details"  style="color: aliceblue;">Details:</label>
-      <textarea class="form-control" id="details" [(ngModel)]="newEmployee.details" placeholder="Enter employee details"></textarea>
+      <textarea style="color: aliceblue;"  class="form-control" id="details" [(ngModel)]="newEmployee.details" placeholder="Enter employee details"></textarea>
     </div>
     <button type="button" class="btn btn-primary" (click)="signup()">Register</button>
     <!-- <button type="button" class="btn btn-link" (click)="navigateToLogin()">Login</button> -->
   </form>
 </div>
-</div>
+
 </div>
 
 

@@ -29,7 +29,7 @@ constructor(private route:Router,private emp: EmployeeService,private loginServi
 
 }
 navigateToNavbar(){
-  //this.emp.loginClick = true;
+  this.emp.loginClick = true;
   let params = {
     "email": "yogarani.2014.prabhu@gmail.com",
     "password": "Test@123#"
@@ -49,16 +49,13 @@ ngOnInit(): void {
 }
 signup() {
   this.emp.addEmployee(this.newEmployee.value).subscribe((res:any) => {
-    // console.log(this.newEmployee.value);
    
-    console.log("Registration successfull")
-    window.alert("Registration successfull")
+  
   });
   this.isvalid=true
 }
 
 navigateToLogin() {
-  // this.route.navigate(['/login']);
 }
 
 }

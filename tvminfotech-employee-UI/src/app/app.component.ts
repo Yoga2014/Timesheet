@@ -9,18 +9,17 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'tvm';
-  navView = false;
+  navView = true;
   href = '';
   constructor(private emp: EmployeeService,
-    private router: Router){ }
+    private router: Router) { }
 
- ngDoCheck(){
-  this.href = this.router.url;
-  console.log('href',this.href);
-  if(this.href != '/'){
-    this.navView = this.emp.loginClick;
-  }else{
-    this.navView = false
+  ngDoCheck() {
+    this.href = this.router.url;
+    if (this.href === '/') {
+      this.navView = false;
+    } else {
+      this.navView = true
+    }
   }
- }
 }
