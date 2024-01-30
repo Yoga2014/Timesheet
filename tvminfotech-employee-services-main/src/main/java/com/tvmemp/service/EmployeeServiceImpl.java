@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
@@ -24,16 +26,24 @@ public class EmployeeServiceImpl implements EmployeeService {
 	/**
 	 * save employee details
 	 */
+	private static final Logger log = LoggerFactory.getLogger(EmployeeServiceImpl.class);
+	
 	
 	@Override
 	public TvmEmployee saveEmp(TvmEmployee employee) {
+		log.info("This is a save Employee");
+		log.error("Not yet saved");
 		return repo.save(employee);
 	}
 
 	// get
+	
 	@Override
+	
 	public Optional<TvmEmployee> getEmp(Integer id) {
 
+		log.info("This is Employee ");
+		log.error("Not found");
 		return repo.findById(id);
 
 	}
@@ -41,6 +51,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 	// getAll
 	@Override
 	public List<TvmEmployee> getAllEmp() {
+		log.info("All Employee Details");
+		log.error("Unable to load the Employee");
 		return repo.findAll();
 	}
 
@@ -61,6 +73,9 @@ public class EmployeeServiceImpl implements EmployeeService {
 		emp1.setEmployeetechnologydetails(employee.getEmployeetechnologydetails());
 		emp1.setEmployeeprojectdetails(employee.getEmployeeprojectdetails());
 		
+		log.info("updated successfully");
+		log.error("Employee id not found, unable to update");
+		
 		return repo.save(emp1);
 
 	}
@@ -68,7 +83,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 	// delete
 	@Override
 	public void deleteEmployee(Integer id) {
-
+        log.info("Deleted");
+        log.error("not found the id", id);
 		repo.deleteById(id);
 
 	}

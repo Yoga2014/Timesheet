@@ -15,17 +15,27 @@ import com.tvmemp.service.AuthenticationService;
 import com.tvmemp.service.JwtService;
 
 @RequestMapping("/auth")
-@CrossOrigin("*")
 @RestController
 public class AuthenticationController {
     private final JwtService jwtService;
     
     private final AuthenticationService authenticationService;
 
+    /**
+     * 
+     * @param jwtService
+     * @param authenticationService
+     */
     public AuthenticationController(JwtService jwtService, AuthenticationService authenticationService) {
         this.jwtService = jwtService;
         this.authenticationService = authenticationService;
     }
+
+    /**
+     * 
+     * @param registerUserDto
+     * @return
+     */
 
     @PostMapping("/signup")
     public ResponseEntity<User> register(@RequestBody RegisterUserDto registerUserDto) {
@@ -34,6 +44,11 @@ public class AuthenticationController {
         return ResponseEntity.ok(registeredUser);
     }
 
+    /**
+     * 
+     * @param loginUserDto
+     * @return
+     */
     @PostMapping("/login")
     public ResponseEntity<LoginResponse> authenticate(@RequestBody LoginUserDto loginUserDto) {
         User authenticatedUser = authenticationService.authenticate(loginUserDto);
