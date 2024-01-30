@@ -1,6 +1,7 @@
 package com.tvmemp.controller;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,10 +21,21 @@ public class AuthenticationController {
     
     private final AuthenticationService authenticationService;
 
+    /**
+     * 
+     * @param jwtService
+     * @param authenticationService
+     */
     public AuthenticationController(JwtService jwtService, AuthenticationService authenticationService) {
         this.jwtService = jwtService;
         this.authenticationService = authenticationService;
     }
+
+    /**
+     * 
+     * @param registerUserDto
+     * @return
+     */
 
     @PostMapping("/signup")
     public ResponseEntity<User> register(@RequestBody RegisterUserDto registerUserDto) {
@@ -32,6 +44,11 @@ public class AuthenticationController {
         return ResponseEntity.ok(registeredUser);
     }
 
+    /**
+     * 
+     * @param loginUserDto
+     * @return
+     */
     @PostMapping("/login")
     public ResponseEntity<LoginResponse> authenticate(@RequestBody LoginUserDto loginUserDto) {
         User authenticatedUser = authenticationService.authenticate(loginUserDto);

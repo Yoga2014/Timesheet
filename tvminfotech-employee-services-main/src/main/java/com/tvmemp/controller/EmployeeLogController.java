@@ -29,15 +29,23 @@ public class EmployeeLogController {
 	@Autowired
 	private EmployeeLogoutRepo logoutrepo;
 
+	/**
+	 * 
+	 * @param login
+	 * @return
+	 */
 	@PostMapping("/saveLogin")
-
 	public EmployeeLog saveLogin(@RequestBody EmployeeLog login) {
 
 		return loginrepo.save(login);
 	}
 
+	/**
+	 * 
+	 * @param logout
+	 * @return
+	 */
 	@PostMapping("/saveLogout")
-
 	public EmployeeLogout saveLogout(@RequestBody EmployeeLogout logout) {
 
 		return logoutrepo.save(logout);
@@ -45,6 +53,11 @@ public class EmployeeLogController {
 
 	// Getting login details By using employee id
 
+	/**
+	 * 
+	 * @param id
+	 * @return
+	 */
 	@GetMapping("/getLogdetails/{id}")
 	public List<Map<String, Object>> getBylogid(@PathVariable("id") Integer id) {
 

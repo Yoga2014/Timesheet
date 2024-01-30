@@ -11,17 +11,36 @@ import com.tvmemp.model.TvmEmployee;
 
 public interface TvmEmployeeRepository extends JpaRepository<TvmEmployee, Integer> {
 
+	/**
+	 * 
+	 * @param employeesalary
+	 * @return
+	 */
 	@Query(value = "SELECT * from tvmemployee n WHERE n.employeesalary>:employeesalary", nativeQuery = true)
 	public List<TvmEmployee> getEmployeeBySalary(Long employeesalary);
 
+	/**
+	 * 
+	 * @param employeefirstname
+	 * @return
+	 */
 	@Query(value = "SELECT * from tvmemployee n WHERE n.employeefirstname=:employeefirstname", nativeQuery = true)
 	public List<TvmEmployee> getEmployeefirstName(String employeefirstname);
 
+	/**
+	 * 
+	 * @param employeelastname
+	 * @return
+	 */
 	@Query(value = "SELECT * from tvmemployee n WHERE n.employeelastname=:employeelastname", nativeQuery = true)
 	public List<TvmEmployee> getEmployeeBylastName(String employeelastname);
 
 	// Getting Employee details using passed out year
-
+    /**
+     * 
+     * @param yearofPassout
+     * @return
+     */
 	@Query(value = "SELECT t.assestid,t.employeeesalary,t.employeeemail,t.employeefirstname,t.employeelastname,t.employeephone,e.education_id, e.percentage, e.university, e.yearof_passout "
 			+ "FROM tvmemployee t LEFT JOIN employeeeducation e " + "ON t.employeeid=e.employeeid "
 			+ "WHERE e.yearof_passout=:yearofPassout", nativeQuery = true)
@@ -30,17 +49,31 @@ public interface TvmEmployeeRepository extends JpaRepository<TvmEmployee, Intege
 
 	// Getting EmployeeAssest using employee id 
 	
+	/**
+	 * 
+	 * @param employeeId
+	 * @return
+	 */
 	@Query(value = "SELECT te.employeeid, te.employeeemail, te.employeefirstname, te.employeelastname, te.employeephone, te.employeeesalary, "
 			+ "ea.assestid, ea.charger, ea.headphone, ea.laptop FROM tvmemployee te LEFT JOIN empassest ea ON te.assestid=ea.assestid "
 			+ "WHERE te.employeeid=:employeeId", nativeQuery = true)
     public List<TvmEmployee> findByAssestId(Integer employeeId);
 	
+	/**
+	 * 
+	 * @param laptop
+	 * @return
+	 */
 	@Query(value = "SELECT te.employeeid, te.employeeemail, te.employeefirstname, te.employeelastname, te.employeephone, te.employeeesalary, "
 			+ "ea.assestid, ea.charger, ea.headphone, ea.laptop FROM tvmemployee te LEFT JOIN empassest ea ON te.assestid=ea.assestid "
 			+ "WHERE ea.laptop=:laptop", nativeQuery = true)
     public List<TvmEmployee> findByAssestlaptop(String laptop);
 
-	
+	/**
+	 * 
+	 * @param employeeFirstname
+	 * @return
+	 */
 	//Login, Logout Time GetByEmployeeName
 	@Query(value="SELECT te.employeeid,te.employeeemail,te.employeefirstname,"
 			+ "te.employeelastname,te.employeephone,te.employeeesalary,te.assestid,"
@@ -60,6 +93,11 @@ public interface TvmEmployeeRepository extends JpaRepository<TvmEmployee, Intege
 			+ "WHERE te.employeeid=:employeeId", nativeQuery = true)
     public List<Map<String, Object>> getByEmpIdLogio(Integer employeeId);
 	
+	/**
+	 * 
+	 * @param techname
+	 * @return
+	 */
 	@Query(value = "SELECT te.employeeid,te.employeeemail,te.employeefirstname,"+
 			"te.employeelastname,te.employeephone,te.employeeesalary,te.assestid," +
 	        "b.projectid, b.projectname, a.techid, a.techname " +
