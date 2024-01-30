@@ -1,0 +1,68 @@
+/* Add this CSS to your component's styles or styles.css file */
+
+.popup-container {
+    max-width: 400px; /* Adjust the max-width as needed */
+    max-height: 500px; /* Set a maximum height for the container */
+    overflow-y: auto; /* Add a vertical scrollbar when needed */ /* Adjust the max-width as needed */
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Add a vertical scrollbar when needed */
+  }
+  
+  .form-label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 2px;
+    margin-top: 2px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-control:focus {
+    border-color: #007bff;
+    outline: 0;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: #fff;
+  }
+  
+  .btn-primary:hover,
+  .btn-secondary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
+  /* Optional: Add styles for responsive design */
+  @media (max-width: 768px) {
+    .popup-container {
+      max-width: 100%;
+    }
+  }
+  
