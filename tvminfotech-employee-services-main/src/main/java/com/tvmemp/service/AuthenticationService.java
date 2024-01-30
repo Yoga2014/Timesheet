@@ -33,6 +33,7 @@ public class AuthenticationService {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
     }
+
 /**
  * 
  * @param input
@@ -46,8 +47,7 @@ public class AuthenticationService {
 
         return userRepository.save(user);
     }
-    
-    
+  
 /**
  * 
  * @param input

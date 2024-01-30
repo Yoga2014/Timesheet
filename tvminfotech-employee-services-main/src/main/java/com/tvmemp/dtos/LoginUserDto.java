@@ -2,7 +2,6 @@ package com.tvmemp.dtos;
 
 
 public class LoginUserDto {
-	
     private String email;
     
     private String password;

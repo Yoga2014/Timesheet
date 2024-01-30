@@ -131,7 +131,7 @@
       "details": "Jane Smith is an experienced product manager with a proven track record of delivering successful products to market. She excels in product strategy, user experience design, and cross-functional collaboration. Jane is passionate about creating products that meet user needs and drive business growth."
     },
     {
-      "id": 0,
+      "id": "0",
       "name": "",
       "position": "",
       "address": {
@@ -204,8 +204,138 @@
     }
   ],
   "attendance": [
-    { "id": 1, "employeeId": "001", "date": "2022-01-01", "checkinTime": "09:00:00","checkoutTime": "06:30:00", "attendanceType": "WFO" },
-    { "id": 2, "employeeId": "002", "date": "2022-01-01", "checkinTime": "09:15:00","checkoutTime": "06:15:00", "attendanceType": "WFO" },
-    { "id": 3, "employeeId": "001", "date": "2022-01-02", "checkinTime": "09:30:00","checkoutTime": "07:00:00", "attendanceType": "WFH" }
+    {
+      "id": "1",
+      "employeeId": "001",
+      "date": "2022-01-01",
+      "checkinTime": "09:00:00",
+      "checkoutTime": "06:30:00",
+      "attendanceType": "WFO",
+      "totallogintime": ""
+    },
+    {
+      "id": "2",
+      "employeeId": "002",
+      "date": "2022-01-01",
+      "checkinTime": "09:15:00",
+      "checkoutTime": "06:15:00",
+      "attendanceType": "Leave",
+      "totallogintime": ""
+    },
+    {
+      "id": "3",
+      "employeeId": "001",
+      "date": "2022-01-02",
+      "checkinTime": "09:30:00",
+      "checkoutTime": "07:00:00",
+      "attendanceType": "WFH",
+      "totallogintime": ""
+    },
+    {
+      "id": "4",
+      "employeeId": "002",
+      "date": "2022-01-02",
+      "checkinTime": "09:30:00",
+      "checkoutTime": "07:00:00",
+      "attendanceType": "Leave",
+      "totallogintime": ""
+    },
+    {
+      "id": "7",
+      "employeeId": "001",
+      "date": "2022-01-02",
+      "checkinTime": "09:30:00",
+      "checkoutTime": "07:00:00",
+      "attendanceType": "WFO",
+      "totallogintime": ""
+    },
+    {
+      "id": "5",
+      "employeeId": "001",
+      "date": "2022-01-02",
+      "checkinTime": "09:30:00",
+      "checkoutTime": "07:00:00",
+      "attendanceType": "Holiday",
+      "totallogintime": ""
+    },
+    {
+      "id": "2",
+      "employeeId": "001",
+      "date": "2022-01-02",
+      "checkinTime": "09:30:00",
+      "checkoutTime": "07:00:00",
+      "attendanceType": "WFH",
+      "totallogintime": ""
+    },
+    {
+      "id": "308a",
+      "employeeId": "1",
+      "attendanceType": "WFH"
+    },
+    {
+      "id": "1a08",
+      "employeeId": "1",
+      "attendanceType": "Holiday"
+    },
+    {
+      "id": "0a0a",
+      "employeeId": "1",
+      "attendanceType": "WFO"
+    },
+    {
+      "id": "d59f",
+      "employeeId": "5",
+      "attendanceType": "Leave"
+    },
+    {
+      "id": "f71d",
+      "employeeId": "10",
+      "attendanceType": "WFH"
+    },
+    {
+      "id": "267a",
+      "employeeId": "1",
+      "attendanceType": "Holiday"
+    },
+    {
+      "id": "3e57",
+      "employeeId": "2",
+      "attendanceType": "WFO"
+    },
+    {
+      "id": "5126",
+      "employeeId": "1",
+      "attendanceType": "WFO"
+    },
+    {
+      "id": "c211",
+      "employeeId": "3",
+      "attendanceType": "Leave"
+    },
+    {
+      "id": "8567",
+      "employeeId": "1",
+      "attendanceType": "Holiday"
+    },
+    {
+      "id": "3e29",
+      "employeeId": "1",
+      "attendanceType": "WFH"
+    },
+    {
+      "id": "d2ce",
+      "employeeId": "1",
+      "attendanceType": "WFO"
+    },
+    {
+      "id": "0774",
+      "employeeId": "1",
+      "attendanceType": "Holiday"
+    },
+    {
+      "id": "9a60",
+      "employeeId": "1",
+      "attendanceType": "Leave"
+    }
   ]
 }

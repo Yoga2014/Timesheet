@@ -1,18 +1,19 @@
-<div>
+    <div>
     <h2>Employee Attendance</h2>
     <form [formGroup]="attendanceForm" (ngSubmit)="markAttendance()">
       <label for="employeeId">Select Employee:</label>
       <select id="employeeId" formControlName="employeeId">
         <option *ngFor="let employee of employees" [value]="employee.id">{{ employee.name }}</option>
       </select>
-  
+    
       <label for="attendanceType">Select Attendance Type:</label>
       <select id="attendanceType" formControlName="attendanceType">
         <option *ngFor="let option of attendanceOptions" [value]="option">{{ option }}</option>
       </select>
-  
+    
       <button type="submit">Submit</button>
     </form>
+    
   
     <table>
       <thead>
@@ -22,15 +23,25 @@
           <th>Check-in</th>
           <th>Check-out</th>
           <th>Attendance Type</th>
+          <th>Total login time </th>
         </tr>
       </thead>
+  
       <tbody>
-        <tr *ngFor="let record of employees">
+        <tr *ngFor="let record of array" >
           <td>{{ record.employeeId }}</td>
-          <td>{{  record.date | date:'yyyy-MM-dd' }}</td>
-          <td>{{ record.checkIn | date: 'shortTime' }}</td>
-          <td>{{ record.checkOut ? (record.checkOut | date: 'shortTime') : 'Not checked out' }}</td>
+          <td>{{ getCurrentDate() | date:'yyyy-MM-dd' }}</td>
+          <td>
+            {{ record.checkIn | date: 'shortTime' }}
+            <button *ngIf="!record.checkIn" (click)="markCheckIn(record)">Check-in</button>
+          </td>
+          <td>{{ record.checkOut | date: 'shortTime' }} 
+            <button *ngIf="!record.checkOut"(click)="checkout(record)">check-Out</button>
+        </td>
+          
           <td>{{ record.attendanceType }}</td>
+          <td>{{record.totallogintime}}</td>
+        
         </tr>
       </tbody>
     </table>

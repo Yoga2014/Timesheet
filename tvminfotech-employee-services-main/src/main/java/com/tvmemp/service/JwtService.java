@@ -17,21 +17,24 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class JwtService {
-	
+  
     @Value("${security.jwt.secret-key}")
     private String secretKey;
 
     @Value("${security.jwt.expiration-time}")
     private long jwtExpiration;
 
+
     /**
      * 
      * @param token
      * @return
      */
+
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
     }
+
 
     /**
      * 
@@ -40,6 +43,7 @@ public class JwtService {
      * @param claimsResolver
      * @return
      */
+
     public <T> T extractClaim(String token, Function<Claims, T> claimsResolver) {
         final Claims claims = extractAllClaims(token);
         return claimsResolver.apply(claims);
@@ -103,11 +107,13 @@ public class JwtService {
         return extractExpiration(token).before(new Date());
     }
 
+
     /**
      * 
      * @param token
      * @return
      */
+
     private Date extractExpiration(String token) {
         return extractClaim(token, Claims::getExpiration);
     }
