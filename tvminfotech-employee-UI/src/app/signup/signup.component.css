@@ -1,0 +1,63 @@
+
+.container-fluid {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('../../assets/backgroundImg.jpg');
+    object-fit: cover;
+    background-size: cover;
+  }
+  
+  .login-container {
+    /* padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    height: 100%; */
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .login-container h2 {
+    color: #333;
+  }
+  .carousel-inner {
+    border-radius: 10px;
+    /* height: 800px; */
+  }
+  .carousel-inner img {
+    object-fit: cover; 
+    width: 100%;
+    height: 100%;
+  }
+  .carousel {
+    height: 100%;
+  }
+  
+  input::placeholder{
+    font-size: 8px;
+    color: #999;
+  }
+  
+  .formField{
+    font-size: 10px;
+    box-shadow: rgba(52, 61, 131, 0.911) 5px 5px, rgba(62, 65, 125, 0.3) 10px 10px, rgba(101, 107, 168, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+    
+  }
+  label{
+    font-size: 10px;
+  }
+  
+  .style-log{
+     /* background: linear-gradient(to top,rgba(6, 125, 85, 0.488),rgb(15, 158, 65),rgb(50, 233, 147)); */
+     /* background: linear-gradient(to top,rgb(149, 233, 242),rgb(107, 161, 209),rgb(41, 71, 98)); */
+     /* background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg'); */
+     /* object-fit: cover;  */
+   background-color: transparent;
+  
+  }

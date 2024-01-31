@@ -6,7 +6,7 @@ import { Observable } from 'rxjs'
   providedIn: 'root'
 })
 export class EmployeeService {
- loginClick = false;
+ loginClick = true;
   
   constructor(private http:HttpClient) { 
   }
@@ -24,4 +24,5 @@ export class EmployeeService {
   addEmployee(data:any){
     return this.http.post('http://localhost:3000/employees/',data)
   }
+  
 }

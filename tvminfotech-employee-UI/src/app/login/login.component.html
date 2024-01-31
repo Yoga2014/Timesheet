@@ -61,76 +61,29 @@
         </div>
       </div>
 
-    <div class="col-md-4" *ngIf="isvalid==true">
+    <div class="col-md-4">
       <div class="login-container  style-log">
         <div class="container card  p-2" style="background-color: rgba(0,0,0,0.5) !important;border-radius: 10px;">
           <h2 class="mb-4" style="color: aliceblue;">Login</h2>
-          <form>
+          <form [formGroup]="loginForm">
             <div class="form-group">
               <label for="username"  style="color: aliceblue;">Username:</label><br>
-              <input type="text" class="form-control formField" id="username" placeholder="Enter your username">
+              <input type="text" formControlName="userName" class="form-control formField" id="username" placeholder="Enter your username">
             </div>
             <div class="form-group">
               <label for="password"  style="color: aliceblue;">Password:</label><br>
-              <input type="password" class="form-control formField" id="password" placeholder="Enter your password">
+              <input type="password" formControlName="password" class="form-control formField" id="password" placeholder="Enter your password">
             </div><br>
             <button type="submit" (click)="navigateToNavbar()" class="btn btn-primary btn-block col-12 custom-btn">Login</button>
-            <span style="color: aliceblue;">Don't have an account? 
-              <a href="#" (click)="signUpClick()">signUp</a></span>
           </form>
+          <span style="color: aliceblue;">Don't have an account? 
+            <a href="signup" (click)="signUpClick()">signUp</a></span>
         </div>
         </div>
     </div>
 
 
-     <!-- src/app/signup/signup.component.html -->
-<div class="col-md-4" *ngIf="isvalid==false">
-<div class="login-container style-log ">
-  <div class="container card  p-2" style="background-color: rgba(0,0,0,0.5) !important;border-radius: 10px;">
-  <h2 class="mb-1" style="color: aliceblue;">Signup</h2>
-  <form>
-    <div class="form-group">
-      <label for="name"  style="color: aliceblue;">First Name:</label>
-      <input type="text" class="form-control" id="name" [(ngModel)]="newEmployee.name" placeholder="Enter your name">
-    </div>
-    <div class="form-group">
-      <label for="position"  style="color: aliceblue;">Last Name:</label>
-      <input type="text" class="form-control" id="position" [(ngModel)]="newEmployee.position" placeholder="Enter your position">
-    </div>
-    <div class="form-group">
-      <label for="street"  style="color: aliceblue;">Street:</label>
-      <input type="text" class="form-control" id="street" [(ngModel)]="newEmployee.address.street" placeholder="Enter your street">
-    </div>
-    <div class="form-group">
-      <label for="city"  style="color: aliceblue;">City:</label>
-      <input type="text" class="form-control" id="city" [(ngModel)]="newEmployee.address.city" placeholder="Enter your city">
-    </div>
-    <div class="form-group">
-      <label for="state"  style="color: aliceblue;">State:</label>
-      <input type="text" class="form-control" id="state" [(ngModel)]="newEmployee.address.state" placeholder="Enter your state">
-    </div>
-    <div class="form-group">
-      <label for="zip"  style="color: aliceblue;">Zip:</label>
-      <input type="text" class="form-control" id="zip" [(ngModel)]="newEmployee.address.zip" placeholder="Enter your zip">
-    </div>
-    <div class="form-group">
-      <label for="photo"  style="color: aliceblue;">Photo URL:</label>
-      <input type="text" class="form-control" id="photo" [(ngModel)]="newEmployee.photo" placeholder="Enter your photo URL">
-    </div>
-    <div class="form-group">
-      <label for="details"  style="color: aliceblue;">Details:</label>
-      <textarea class="form-control" id="details" [(ngModel)]="newEmployee.details" placeholder="Enter employee details"></textarea>
-    </div>
-    <button type="button" class="btn btn-primary" (click)="signup()">Register</button>
-    <!-- <button type="button" class="btn btn-link" (click)="navigateToLogin()">Login</button> -->
-  </form>
-</div>
-</div>
-</div>
-
-
-  </div>
-
+   
 
 
 

@@ -7,16 +7,21 @@ import { AssetsComponent } from './assets/assets.component';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
 // import { SignupComponent } from './signup/signup.component';
 import { AttendanceComponent } from './attendance/attendance.component';
+import { AuthGuard } from './auth.guard';
+import { SignupComponent } from './signup/signup.component';
+
+
 
 const routes: Routes = [
   // { path: '', redirectTo: '/navbar', pathMatch: 'full' },
   {path:'',component:LoginComponent},
-  // {path:'signup',component:SignupComponent},
-  {path:'home',component:HomeComponent},
-  {path:'navbar',component:NavbarComponent},
-  {path:'attendance',component:AttendanceComponent},
-  {path:'assets',component:AssetsComponent},
-  {path:'employee-detail',component:EmployeeDetailComponent}
+  {path:'login',component:LoginComponent},
+  {path:'signup',component:SignupComponent},
+  {path:'home',component:HomeComponent,canActivate:[AuthGuard]},
+  {path:'navbar',component:NavbarComponent,canActivate:[AuthGuard]},
+  {path:'attendance',component:AttendanceComponent,canActivate:[AuthGuard]},
+  {path:'assets',component:AssetsComponent,canActivate:[AuthGuard]},
+  {path:'employee-detail',component:EmployeeDetailComponent,canActivate:[AuthGuard]}
 ];
 
 @NgModule({
