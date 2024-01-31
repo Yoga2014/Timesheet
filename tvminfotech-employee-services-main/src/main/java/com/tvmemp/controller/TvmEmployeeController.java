@@ -139,7 +139,7 @@ public class TvmEmployeeController {
 	  * @return
 	  */
 	 @GetMapping("/getEmployeeByAssestlaptop/{laptop}")
-	    public List<TvmEmployee> getEmployeeByAssestId(@PathVariable("laptop") String laptop) {
+	    public List<TvmEmployee> getEmployeeByAssestlaptop(@PathVariable("laptop") String laptop) {
 	        return ser.findByAssestlaptop(laptop);
 	    
 	 }
