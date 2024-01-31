@@ -157,14 +157,14 @@
     {
       "employeeId": 1,
       "name": "John Doe",
-      "position": "Software Engineer",
+      "position": "Software Engineerz",
       "assetName": "Laptop",
       "assetValue": "$1200",
       "id": "9e55"
     },
     {
       "employeeId": 2,
-      "name": "John Doe",
+      "name": "priya",
       "position": "Software Engineer",
       "assetName": "Monitor",
       "assetValue": "$300",
@@ -172,7 +172,7 @@
     },
     {
       "employeeId": 3,
-      "name": "John Doe",
+      "name": "Ram",
       "position": "Software Engineer",
       "assetName": "Tablet",
       "assetValue": "$800",
@@ -180,7 +180,7 @@
     },
     {
       "employeeId": 4,
-      "name": "John Doe",
+      "name": "HARISH",
       "position": "Software Engineer",
       "assetName": "Desktop Computer",
       "assetValue": "$1500",
@@ -207,135 +207,64 @@
     {
       "id": "1",
       "employeeId": "001",
-      "date": "2022-01-01",
-      "checkinTime": "09:00:00",
-      "checkoutTime": "06:30:00",
+      "date": "",
+      "checkinTime": "",
+      "checkoutTime": "",
       "attendanceType": "WFO",
       "totallogintime": ""
     },
     {
       "id": "2",
       "employeeId": "002",
-      "date": "2022-01-01",
-      "checkinTime": "09:15:00",
-      "checkoutTime": "06:15:00",
+      "date": "",
+      "checkinTime": "",
+      "checkoutTime": "",
       "attendanceType": "Leave",
       "totallogintime": ""
     },
     {
       "id": "3",
-      "employeeId": "001",
-      "date": "2022-01-02",
-      "checkinTime": "09:30:00",
-      "checkoutTime": "07:00:00",
+      "employeeId": "003",
+      "date": "",
+      "checkinTime": "",
+      "checkoutTime": "",
       "attendanceType": "WFH",
       "totallogintime": ""
     },
     {
-      "id": "4",
-      "employeeId": "002",
-      "date": "2022-01-02",
-      "checkinTime": "09:30:00",
-      "checkoutTime": "07:00:00",
-      "attendanceType": "Leave",
-      "totallogintime": ""
-    },
-    {
-      "id": "7",
-      "employeeId": "001",
-      "date": "2022-01-02",
-      "checkinTime": "09:30:00",
-      "checkoutTime": "07:00:00",
-      "attendanceType": "WFO",
-      "totallogintime": ""
-    },
-    {
-      "id": "5",
-      "employeeId": "001",
-      "date": "2022-01-02",
-      "checkinTime": "09:30:00",
-      "checkoutTime": "07:00:00",
-      "attendanceType": "Holiday",
-      "totallogintime": ""
-    },
-    {
-      "id": "2",
-      "employeeId": "001",
-      "date": "2022-01-02",
-      "checkinTime": "09:30:00",
-      "checkoutTime": "07:00:00",
-      "attendanceType": "WFH",
-      "totallogintime": ""
-    },
-    {
-      "id": "308a",
-      "employeeId": "1",
-      "attendanceType": "WFH"
-    },
-    {
-      "id": "1a08",
+      "id": "5bec",
       "employeeId": "1",
       "attendanceType": "Holiday"
     },
     {
-      "id": "0a0a",
-      "employeeId": "1",
-      "attendanceType": "WFO"
-    },
-    {
-      "id": "d59f",
-      "employeeId": "5",
-      "attendanceType": "Leave"
-    },
-    {
-      "id": "f71d",
-      "employeeId": "10",
-      "attendanceType": "WFH"
-    },
-    {
-      "id": "267a",
-      "employeeId": "1",
-      "attendanceType": "Holiday"
-    },
-    {
-      "id": "3e57",
+      "id": "5cdc",
       "employeeId": "2",
       "attendanceType": "WFO"
     },
     {
-      "id": "5126",
-      "employeeId": "1",
-      "attendanceType": "WFO"
-    },
-    {
-      "id": "c211",
-      "employeeId": "3",
-      "attendanceType": "Leave"
-    },
-    {
-      "id": "8567",
-      "employeeId": "1",
-      "attendanceType": "Holiday"
-    },
-    {
-      "id": "3e29",
+      "id": "f40c",
       "employeeId": "1",
       "attendanceType": "WFH"
     },
     {
-      "id": "d2ce",
-      "employeeId": "1",
-      "attendanceType": "WFO"
-    },
-    {
-      "id": "0774",
-      "employeeId": "1",
+      "id": "9da6",
+      "employeeId": "5",
       "attendanceType": "Holiday"
     },
     {
-      "id": "9a60",
-      "employeeId": "1",
+      "id": "e377",
+      "employeeId": "10",
       "attendanceType": "Leave"
+    },
+    {
+      "id": "74c0",
+      "employeeId": "4",
+      "attendanceType": "WFO"
+    },
+    {
+      "id": "b979",
+      "employeeId": "3",
+      "attendanceType": "Holiday"
     }
   ]
 }

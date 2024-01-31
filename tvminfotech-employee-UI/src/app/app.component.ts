@@ -18,6 +18,7 @@ export class AppComponent {
   this.href = this.router.url;
   console.log('href',this.href);
   if(this.href != '/'){
+    debugger
     this.navView = this.emp.loginClick;
   }else{
     this.navView = false
