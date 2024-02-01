@@ -8,13 +8,26 @@
       </ul>
     </div>
     <div class="employee-details">
-      <h2>Employee Asset Details</h2>
-      <div *ngIf="selectedEmployee.employeeId; else noSelection">
+    
+<button type="button" style="margin-left: 400px;" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  
+  click to add asset details
+</button>
+<h2>Employee Asset Details</h2>
+      <div *ngIf="selectedEmployee.Id; else noSelection">
         <p><strong>Name:</strong> {{ selectedEmployee.name }}</p>
         <p><strong>Position:</strong> {{ selectedEmployee.position }}</p>
-        <!-- <p><strong>Department:</strong> {{ selectedEmployee.department }}</p> -->
+        <p><strong>Mobile Number:</strong> {{ selectedEmployee.number }}</p>
+        <p><strong>Assest Name:</strong> {{ selectedEmployee. assetsname}}</p>
+        <p><strong>Phone Model:</strong> {{ selectedEmployee. model}}</p>
+        <p><strong>Laptop Model:</strong> {{ selectedEmployee. models}}</p>
+        <p><strong>Received Date:</strong> {{ selectedEmployee. receiveddate}}</p>
+        <p><strong>Returned Asset:</strong> {{ selectedEmployee. check}}</p>
+        <p><strong>Returned Asset Date:</strong> {{ selectedEmployee. returnDate}}</p>
+        {{selectedEmployee.image | json}}
+        <p><strong>Image:</strong> <img [src]="selectedEmployee.image" alt=""></p>
         <ul>
-          <li *ngFor="let detail of assetDetails">
+          <li *ngFor="let detail of  selectedEmployee ">
             {{ detail.assetName }}: {{ detail.assetValue }}
           </li>
         </ul>
@@ -22,6 +35,86 @@
       <ng-template #noSelection>
         <p>No employee selected.</p>
       </ng-template>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Assets Data</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+
+
+<form [formGroup]="assestsData">
+
+  <div class="form-group">
+    <label class="formGroupExampleInput2" style="margin-top: 20px;">Enter Id</label>
+    <input type="text" class="form-control"  formControlName="Id">
+    <div class="colors" *ngIf="assestsData.get('Id')?.hasError('required') && assestsData.get('Id')?.touched">
+      <span style="color:red;font-size: small;">User id is required.</span>
     </div>
   </div>
+  <div class="form-group">
+    <label class="formGroupExampleInput2"> Enter Full Name</label>
+    <input type="text" class="form-control" formControlName="name"> 
+    <div class="colors" *ngIf="assestsData.get('name')?.hasError('required') && assestsData.get('name')?.touched">
+      <span style="color:red;font-size: small;">userName is required.</span>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="formGroupExampleInput2"> Enter Position</label>
+    <input type="text" class="form-control"  formControlName="position">
+    <div class="colors" *ngIf="assestsData.get('position')?.hasError('required') && assestsData.get('position')?.touched">
+      <span style="color:red;font-size: small;">Position is required.</span>
+    </div> 
+ </div>
+ <div class="form-group">
+  <label class="formGroupExampleInput2"> Mobile Number</label>
+  <input type="number" class="form-control"  formControlName="number"> 
+  <div class="colors" *ngIf="assestsData.get('number')?.hasError('required') && assestsData.get('number')?.touched">
+    <span style="color:red;font-size: small;"> Mobile Number is required.</span>
+  </div>
+</div>
+<div class="form-group">
+  <label class="formGroupExampleInput2"> Assets Name</label>
+  <input type="text" class="form-control"  formControlName="assetsname"> 
+  <div class="colors" *ngIf="assestsData.get('assetsname')?.hasError('required') && assestsData.get('assetsname')?.touched">
+    <span style="color:red;font-size: small;">assetsDetail is required.</span>
+  </div>
+</div>
+<div class="form-group">
+  <label class="formGroupExampleInput2"> Phone Model</label>
+  <input type="text" class="form-control"  formControlName="model"> 
+</div>
+<div class="form-group">
+  <label class="formGroupExampleInput2">Laptop Model</label>
+  <input type="text" class="form-control"  formControlName="models"> 
+</div>
+<div class="form-group">
+  <label class="formGroupExampleInput2">Received Date</label>
+  <input type="date" class="form-control"  formControlName="receiveddate"> 
+</div>
+<div class="form-group formGroupExampleInput2">
+  <input type="checkbox" formControlName="check"> 
+  <label class="formGroupExampleInput2" style="margin-left:10px;"> Returned Asset </label>
+  <div class="form-group " *ngIf="assestsData.get('check').value">
+    <input type="date"  class="form-control" style="margin-left: -100px;" formControlName="returnDate">
+ </div>
+</div>
+ <label class="btn btn-default p-0">
+  <input type="file" class="form-control"  accept="image/*" multiple (change)="selectFiles($event)" formControlName="image" />
+</label>
+</form>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+  <button type="button" class="btn btn-primary" (click)="save()">Save changes</button>
+</div>
+
+
+    </div>
+    
+  </div>
+  
   

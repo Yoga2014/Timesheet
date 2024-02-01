@@ -45,3 +45,56 @@
   color: aliceblue;
   margin-left: 20px;
 }
+
+
+/* nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #dddddd;
+} */
+
+/* nav a:hover {
+    background-color: grey;
+    color:blue;
+}  */
+ /* .col-1{
+   margin-left: 20px;
+ }
+ .col{
+  margin-left: 80px;
+ }
+ .col:hover{
+  background-color: rgb(155, 26, 155);
+  width: auto;
+
+ }
+  */
+
+
+  .col-1 {
+    display: flex;
+    
+  }
+  
+  .navbar-brand {
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    width:auto;
+    transition: background-color 0.3s; /* Smooth transition for background color */
+  }
+  
+  .navbar-brand:hover {
+    background-color: red;
+  }
+  
+  .navbar-brand.active {
+    background-color: red;
+  }
+  .coll{
+    margin-left: 40px;
+  }

@@ -134,24 +134,115 @@
       "id": "0",
       "name": "",
       "position": "",
+      "id": "06d6",
+      "name": "Tvm info",
+      "position": "Product Manager",
       "address": {
-        "street": "",
-        "city": "",
-        "state": "",
-        "zip": ""
-      },
-      "photo": "",
-      "details": ""
+        "street": "456 Oak St",
+        "city": "Anycity",
+        "state": "NY",
+        "zip": "54321"
+      }
     },
     {
-      "id": "f7fc"
+      "id": "30d1",
+      "name": "Tvm tech",
+      "position": "Product Manager",
+      "address": {
+        "street": "456 Oak St",
+        "city": "Anycity",
+        "state": "NY",
+        "zip": "54321"
+      }
     },
     {
-      "id": "1c4c"
+      "id": "533e",
+      "Id": 106,
+      "name": "Amala",
+      "position": "test1",
+      "number": 9659621044,
+      "model": "vivo y83",
+      "assetsname": "phone",
+      "receiveddate": "2024-01-17",
+      "check": true
     },
     {
-      "id": "4447"
+      "id": "22e7",
+      "Id": 897,
+      "name": "Reshma",
+      "position": "Developer",
+      "number": 8975342,
+      "model": "real me",
+      "assetsname": "mobile",
+      "receiveddate": "2024-01-24",
+      "check": true
+    },
+    {
+      "id": "888d",
+      "Id": 567,
+      "name": "Ramji",
+      "position": "assist",
+      "number": 873566095,
+      "model": "moto",
+      "assetsname": "lap",
+      "receiveddate": "2024-02-06",
+      "check": true,
+      "image": "/assets/joshua-koblin-eqW1MPinEV4-unsplash.jpg"
+    },
+    {
+      "id": "1f96",
+      "Id": 789,
+      "name": "shalini",
+      "position": "devops",
+      "number": 8743672,
+      "model": "red me",
+      "assetsname": "lap",
+      "receiveddate": "2024-01-31",
+      "check": false,
+      "image": ""
+    },
+    {
+      "id": "13dc",
+      "Id": 908,
+      "name": "Rajesh",
+      "position": "professor",
+      "number": 7474748484,
+      "model": "realme",
+      "assetsname": "tab",
+      "receiveddate": "2024-01-30",
+      "check": true,
+      "image": ""
+    },
+    {
+      "id": "5c3e",
+      "Id": 890,
+      "name": "varsha",
+      "position": "Deveoper",
+      "number": 786523456,
+      "model": "red me",
+      "models": "asus",
+      "assetsname": "lap,mobile",
+      "receiveddate": "2024-02-06",
+      "returnDate": "2024-01-25",
+      "check": true,
+      "image": "C:/fakepath/Screenshot (7).png"
+    },
+    {
+      "id": "945a",
+      "Id": "789",
+      "name": "Rakshu",
+      "position": "developer",
+      "number": 6576879834,
+      "model": "",
+      "models": "asus",
+      "assetsname": "Lap",
+      "receiveddate": "2024-02-01",
+      "returnDate": "",
+      "check": "",
+      "image": "C:\\fakepath\\Screenshot (7).png"
     }
+
+
   ],
   "assets": [
     {
@@ -182,16 +273,16 @@
       "employeeId": 4,
       "name": "John Doe",
       "position": "Software Engineer",
-      "assetName": "Desktop Computer",
-      "assetValue": "$1500",
+      "assetName": "Phone Number",
+      "assetValue": "9876309423",
       "id": "c7d7"
     },
     {
       "employeeId": 5,
       "name": "John Doe",
       "position": "Software Engineer",
-      "assetName": "Desktop Computer",
-      "assetValue": "$1500",
+      "assetName": "Phone Model",
+      "assetValue": "Redmi",
       "id": "8c7e"
     },
     {
@@ -201,20 +292,27 @@
       "assetName": "Desktop Computer",
       "assetValue": "$1500",
       "id": "e9ca"
+    },
+    {
+      "employeeId": 7,
+      "name": "John Doe",
+      "position": "Software Engineer",
+      "assetName": "Received Date",
+      "assetValue": "",
+      "id": "e9ca"
     }
   ],
   "attendance": [
     {
-      "id": "1",
+      "id": 1,
       "employeeId": "001",
       "date": "2022-01-01",
       "checkinTime": "09:00:00",
       "checkoutTime": "06:30:00",
-      "attendanceType": "WFO",
-      "totallogintime": ""
+      "attendanceType": "WFO"
     },
     {
-      "id": "2",
+      "id": 2,
       "employeeId": "002",
       "date": "2022-01-01",
       "checkinTime": "09:15:00",
@@ -224,6 +322,10 @@
     },
     {
       "id": "3",
+      "attendanceType": "WFO"
+    },
+    {
+      "id": 3,
       "employeeId": "001",
       "date": "2022-01-02",
       "checkinTime": "09:30:00",
@@ -336,6 +438,7 @@
       "id": "9a60",
       "employeeId": "1",
       "attendanceType": "Leave"
+      "attendanceType": "WFH"
     }
   ]
 }
