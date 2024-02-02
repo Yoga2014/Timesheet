@@ -106,4 +106,10 @@ public interface TvmEmployeeRepository extends JpaRepository<TvmEmployee, Intege
 	        "LEFT JOIN employee_project_details b ON te.employeeid = b.employeeid " +
 	        "WHERE a.techname = :techname", nativeQuery = true)
       public List<TvmEmployee> getUsersByTechnology(@Param("techname") String techname);
+	
+	@Query(value = "SELECT te.employeeid,te.employeeemail,te.employeefirstname,"
+			+ "te.employeelastname,te.employeephone,te.employeeesalary,te.assestid, ei.imageid,ei.image"
+			+ " FROM tvmemployee te LEFT JOIN employee_image ei ON te.employeeid=ei.imageid "
+			+ "WHERE te.employeeid=:employeeid", nativeQuery = true)
+	public TvmEmployee getEmployeeIdWithImage(Integer employeeid);
 }
