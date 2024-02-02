@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { EmployeeService } from '../employee.service';
 import { AttendanceService } from '../attendance.service';
+import { EmployeeService } from '../employee.service';
 
 @Component({
   selector: 'app-attendance',

@@ -10,7 +10,7 @@ export class EmployeeDetailComponent implements OnInit {
   employees: any[] = [];
   selectedEmployee: any | null = null;
   
-constructor(private employeeService:EmployeeService){}
+constructor(public employeeService:EmployeeService){}
 
   ngOnInit(): void {
     
