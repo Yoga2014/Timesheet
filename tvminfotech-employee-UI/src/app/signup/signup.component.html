@@ -65,18 +65,18 @@
       <h2 class="mb-1" style="color: aliceblue;">Signup</h2>
       <form [formGroup]="registerForm">
         <div class="form-group">
-          <label for="name"  style="color: aliceblue;">First Name:</label>
-          <input type="text" formControlName="fname" class="form-control" id="name" placeholder="Enter your name">
+          <label for="name"  style="color: #f0f8ff;">FullName:</label>
+          <input type="text" formControlName="fullName" class="form-control" id="name" placeholder="Enter your name">
         </div>
         <div class="form-group">
-          <label for="position"  style="color: aliceblue;">Last Name:</label>
-          <input type="text" formControlName="lname" class="form-control" id="position" placeholder="Enter your position">
+          <label for="position"  style="color: aliceblue;">Email:</label>
+          <input type="email" formControlName="email" class="form-control" id="position" placeholder="Enter your position">
         </div>
         <div class="form-group">
            <label for="" style="color: aliceblue;">Password</label>
            <input type="password" class="form-control" id="password" formControlName="password" placeholder="Enter your password">
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
           <label for="street"  style="color: aliceblue;">Street:</label>
           <input type="text" formControlName="street" class="form-control" id="street"  placeholder="Enter your street">
         </div>
@@ -99,7 +99,7 @@
         <div class="form-group">
           <label for="details"  style="color: aliceblue;">Details:</label>
           <textarea class="form-control" formControlName="details" id="details" placeholder="Enter employee details"></textarea>
-        </div>
+        </div> -->
         <button type="button" class="btn btn-primary" (click)="signup()">Register</button>
         <!-- <button type="button" class="btn btn-link" (click)="navigateToLogin()">Login</button> -->
       </form>

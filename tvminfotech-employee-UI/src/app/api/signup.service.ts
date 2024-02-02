@@ -13,12 +13,14 @@ export class SignupService {
   // authSignUp(params:any){
   //   return this.http.post<any>(this.baseUrl,params);
   // }
+  get(){
+   return this.http.get(`${this.baseUrl}/signup`)
+  }
   signIn(data:any){
     // const loginData = {email , password};
-    return this.http.post(`${this.baseUrl}/signin`, data)
+    return this.http.post(`${this.baseUrl}/login`, data)
   }
   signUp(data: any) {
-    debugger
     const url = `${this.baseUrl}/signup`;
     return this.http.post(url, data).pipe(
       catchError((error) => {

@@ -16,6 +16,7 @@ import com.tvmemp.service.JwtService;
 
 @RequestMapping("/auth")
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 public class AuthenticationController {
     private final JwtService jwtService;
     

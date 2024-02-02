@@ -22,7 +22,7 @@ constructor(private route:Router,private formBuilder:FormBuilder,
 
 ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
-      userName:['',[Validators.required]],
+      email:['',[Validators.required]],
       password:['',[Validators.required]]
     });
 
@@ -46,6 +46,7 @@ navigateToNavbar(){
   //   localStorage.setItem('expiresIn',x.expiresIn);
   // });
   // this.route.navigate(['/home'])
+  debugger
   if(this.loginForm.valid){
     const formdata = this.loginForm.value;
 
@@ -53,8 +54,8 @@ navigateToNavbar(){
       (res:any)=>{
         alert('Login Successful')
         console.log(res)
-        const authToken = res.token;
-        localStorage.setItem('authToken',authToken)
+      
+        this.route.navigate(['./home'])
       },
       (error)=>{
         alert('Login error')
@@ -67,8 +68,14 @@ signUpClick(){
   debugger
    this.route.navigate(['./signup'])
 }
-
-
+data:any
+click(){
+  debugger
+  this.signupService.get().subscribe((res)=>
+  this.data = res
+  )
+  console.log('vgh', this.data)
+}
 
 navigateToLogin() {
   // this.route.navigate(['/login']);
