@@ -13,8 +13,7 @@ import { SignupComponent } from './signup/signup.component';
 
 
 const routes: Routes = [
-  // { path: '', redirectTo: '/navbar', pathMatch: 'full' },
-  {path:'',component:LoginComponent},
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
   {path:'home',component:HomeComponent,canActivate:[AuthGuard]},
@@ -25,7 +24,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes)], 
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

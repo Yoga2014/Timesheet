@@ -67,3 +67,76 @@
 2024-02-02 15:36:28.559 [http-nio-8080-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
 2024-02-02 15:37:12.814 [http-nio-8080-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
 2024-02-02 15:37:57.721 [http-nio-8080-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-02-02 16:20:49.412 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
+2024-02-02 17:08:01.820 [http-nio-8080-exec-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 23505, SQLState: 23505
+2024-02-02 17:08:04.966 [http-nio-8080-exec-7] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_6DOTKOTT2KJSP8VW4D0M25FB7_INDEX_4 ON PUBLIC.USERS(EMAIL NULLS FIRST) VALUES ( /* 2 */ 'AkashAk@gmail.com' )"; SQL statement:
+insert into users (created_at,email,full_name,password,updated_at,id) values (?,?,?,?,?,default) [23505-224]
+2024-02-02 17:08:10.188 [http-nio-8080-exec-10] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 23505, SQLState: 23505
+2024-02-02 17:08:10.190 [http-nio-8080-exec-10] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_6DOTKOTT2KJSP8VW4D0M25FB7_INDEX_4 ON PUBLIC.USERS(EMAIL NULLS FIRST) VALUES ( /* 2 */ 'AkashAk@gmail.com' )"; SQL statement:
+insert into users (created_at,email,full_name,password,updated_at,id) values (?,?,?,?,?,default) [23505-224]
+2024-02-02 17:09:19.856 [http-nio-8080-exec-4] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 23505, SQLState: 23505
+2024-02-02 17:09:19.856 [http-nio-8080-exec-4] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_6DOTKOTT2KJSP8VW4D0M25FB7_INDEX_4 ON PUBLIC.USERS(EMAIL NULLS FIRST) VALUES ( /* 2 */ 'AkashAk@gmail.com' )"; SQL statement:
+insert into users (created_at,email,full_name,password,updated_at,id) values (?,?,?,?,?,default) [23505-224]
+2024-02-02 17:09:31.632 [http-nio-8080-exec-10] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [Unique index or primary key violation: "PUBLIC.UK_6DOTKOTT2KJSP8VW4D0M25FB7_INDEX_4 ON PUBLIC.USERS(EMAIL NULLS FIRST) VALUES ( /* 2 */ 'AkashAk@gmail.com' )"; SQL statement:<EOL>insert into users (created_at,email,full_name,password,updated_at,id) values (?,?,?,?,?,default) [23505-224]] [insert into users (created_at,email,full_name,password,updated_at,id) values (?,?,?,?,?,default)]; SQL [insert into users (created_at,email,full_name,password,updated_at,id) values (?,?,?,?,?,default)]; constraint ["PUBLIC.UK_6DOTKOTT2KJSP8VW4D0M25FB7_INDEX_4 ON PUBLIC.USERS(EMAIL NULLS FIRST) VALUES ( /* 2 */ 'AkashAk@gmail.com' )"; SQL statement:<EOL>insert into users (created_at,email,full_name,password,updated_at,id) values (?,?,?,?,?,default) [23505-224]]]
+2024-02-02 17:09:31.632 [http-nio-8080-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [Unique index or primary key violation: "PUBLIC.UK_6DOTKOTT2KJSP8VW4D0M25FB7_INDEX_4 ON PUBLIC.USERS(EMAIL NULLS FIRST) VALUES ( /* 2 */ 'AkashAk@gmail.com' )"; SQL statement:<EOL>insert into users (created_at,email,full_name,password,updated_at,id) values (?,?,?,?,?,default) [23505-224]] [insert into users (created_at,email,full_name,password,updated_at,id) values (?,?,?,?,?,default)]; SQL [insert into users (created_at,email,full_name,password,updated_at,id) values (?,?,?,?,?,default)]; constraint ["PUBLIC.UK_6DOTKOTT2KJSP8VW4D0M25FB7_INDEX_4 ON PUBLIC.USERS(EMAIL NULLS FIRST) VALUES ( /* 2 */ 'AkashAk@gmail.com' )"; SQL statement:<EOL>insert into users (created_at,email,full_name,password,updated_at,id) values (?,?,?,?,?,default) [23505-224]]]
+2024-02-02 17:09:31.634 [http-nio-8080-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [Unique index or primary key violation: "PUBLIC.UK_6DOTKOTT2KJSP8VW4D0M25FB7_INDEX_4 ON PUBLIC.USERS(EMAIL NULLS FIRST) VALUES ( /* 2 */ 'AkashAk@gmail.com' )"; SQL statement:<EOL>insert into users (created_at,email,full_name,password,updated_at,id) values (?,?,?,?,?,default) [23505-224]] [insert into users (created_at,email,full_name,password,updated_at,id) values (?,?,?,?,?,default)]; SQL [insert into users (created_at,email,full_name,password,updated_at,id) values (?,?,?,?,?,default)]; constraint ["PUBLIC.UK_6DOTKOTT2KJSP8VW4D0M25FB7_INDEX_4 ON PUBLIC.USERS(EMAIL NULLS FIRST) VALUES ( /* 2 */ 'AkashAk@gmail.com' )"; SQL statement:<EOL>insert into users (created_at,email,full_name,password,updated_at,id) values (?,?,?,?,?,default) [23505-224]]]
+2024-02-02 17:10:42.353 [http-nio-8080-exec-5] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 23505, SQLState: 23505
+2024-02-02 17:10:42.354 [http-nio-8080-exec-5] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_6DOTKOTT2KJSP8VW4D0M25FB7_INDEX_4 ON PUBLIC.USERS(EMAIL NULLS FIRST) VALUES ( /* 2 */ 'AkashAk@gmail.com' )"; SQL statement:
+insert into users (created_at,email,full_name,password,updated_at,id) values (?,?,?,?,?,default) [23505-224]
+2024-02-02 17:10:42.535 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [Unique index or primary key violation: "PUBLIC.UK_6DOTKOTT2KJSP8VW4D0M25FB7_INDEX_4 ON PUBLIC.USERS(EMAIL NULLS FIRST) VALUES ( /* 2 */ 'AkashAk@gmail.com' )"; SQL statement:<EOL>insert into users (created_at,email,full_name,password,updated_at,id) values (?,?,?,?,?,default) [23505-224]] [insert into users (created_at,email,full_name,password,updated_at,id) values (?,?,?,?,?,default)]; SQL [insert into users (created_at,email,full_name,password,updated_at,id) values (?,?,?,?,?,default)]; constraint ["PUBLIC.UK_6DOTKOTT2KJSP8VW4D0M25FB7_INDEX_4 ON PUBLIC.USERS(EMAIL NULLS FIRST) VALUES ( /* 2 */ 'AkashAk@gmail.com' )"; SQL statement:<EOL>insert into users (created_at,email,full_name,password,updated_at,id) values (?,?,?,?,?,default) [23505-224]]]
+2024-02-02 17:11:01.137 [http-nio-8080-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-02-02 17:11:18.515 [http-nio-8080-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-02-02 17:14:19.893 [http-nio-8080-exec-4] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 21648 ms
+2024-02-02 17:21:31.028 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-02-02 17:21:31.034 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-02-02 17:22:03.132 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-02 17:22:05.136 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1825 ms. Found 4 JPA repository interfaces.
+2024-02-02 17:22:21.373 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-02-02 17:22:21.760 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-02-02 17:22:21.783 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-02-02 17:22:21.784 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-02-02 17:22:22.601 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-02-02 17:22:22.609 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 51553 ms
+2024-02-02 17:22:22.910 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-02-02 17:22:31.918 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:tvm_employee user=SA
+2024-02-02 17:22:31.930 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-02-02 17:22:31.975 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:tvm_employee'
+2024-02-02 17:22:36.408 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-02 17:22:44.720 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2024-02-02 17:22:46.507 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-02-02 17:22:55.985 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-02 17:22:59.080 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-02-02 17:23:25.733 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-02 17:23:31.067 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-02 17:23:45.265 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-02 17:23:51.627 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-02 17:24:01.661 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1ce354ab, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7b6cab56, org.springframework.security.web.context.SecurityContextHolderFilter@59db4628, org.springframework.security.web.header.HeaderWriterFilter@1711f15f, org.springframework.web.filter.CorsFilter@5635f4cc, org.springframework.security.web.authentication.logout.LogoutFilter@405ef8c0, com.tvmemp.config.JwtAuthenticationFilter@40cf85ae, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4a26a110, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@38852027, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1ad07f22, org.springframework.security.web.session.SessionManagementFilter@2ab60472, org.springframework.security.web.access.ExceptionTranslationFilter@4d4236a0, org.springframework.security.web.access.intercept.AuthorizationFilter@3a0bbc75]
+2024-02-02 17:24:08.343 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2024-02-02 17:24:09.241 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-02-02 17:24:09.751 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2024-02-02 17:24:09.763 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-02 17:24:10.790 [restartedMain] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2024-02-02 17:24:10.794 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-02-02 17:24:10.818 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-02-02 17:24:12.258 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-02-02 17:24:13.417 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2024-02-02 17:36:06.316 [http-nio-8080-exec-10] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
+2024-02-02 17:41:36.492 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=57s488ms313µs100ns).
+2024-02-02 19:09:12.489 [http-nio-8080-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
+2024-02-02 19:17:43.020 [http-nio-8080-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
+2024-02-02 19:52:00.425 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49s975ms734µs500ns).

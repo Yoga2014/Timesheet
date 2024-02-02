@@ -8,10 +8,12 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { AssetsComponent } from './assets/assets.component';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { SignupComponent } from './signup/signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AttendanceComponent } from './attendance/attendance.component';
+import { AuthGuard } from './auth.guard';
+import { TokenInterceptor } from './api/interceptors/token.interceptor';
 
 
 @NgModule({
@@ -32,7 +34,11 @@ import { AttendanceComponent } from './attendance/attendance.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthGuard,{
+    provide:HTTP_INTERCEPTORS,
+    useClass:TokenInterceptor,
+    multi:true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
