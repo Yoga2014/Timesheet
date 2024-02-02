@@ -7,10 +7,8 @@ import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 
-import com.tvmemp.model.Employee_Assest;
 import com.tvmemp.model.TvmEmployee;
 import com.tvmemp.repository.TvmEmployeeRepository;
 
@@ -157,6 +155,13 @@ public class EmployeeServiceImpl implements EmployeeService {
 		
 		return repo.getByEmpIdLogio(id);
 	}
+
+	@Override
+	public TvmEmployee getEmployeeIdWithImagedetails(Integer employeeid) {
+		return repo.getEmployeeIdWithImage(employeeid);
+	}
+
+	
 	
 
 
