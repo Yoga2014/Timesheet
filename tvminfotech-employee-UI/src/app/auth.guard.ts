@@ -7,11 +7,11 @@ import { SignupService } from './api/signup.service';
   providedIn: 'root'
 })
 export class AuthGuard implements CanActivate {
-  constructor(private routes:Router ,public guarService:SignupService){}
+  constructor(private routes:Router ,public guardService:SignupService){}
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): boolean {
-      if(this.guarService.isloggedIn()){
+      if(this.guardService.isloggedIn()){
         return true
       }
       else{

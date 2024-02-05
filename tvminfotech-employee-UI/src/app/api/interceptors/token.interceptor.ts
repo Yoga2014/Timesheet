@@ -19,7 +19,7 @@ export class TokenInterceptor implements HttpInterceptor {
     const myToken = this.Auth.getToken();
     if(myToken){
       request =request.clone({
-        setHeaders:{Authorization:`Akash ${myToken}`}
+        setHeaders:{Authorization:`Barrer ${myToken}`}
       })
     }
     return next.handle(request).pipe(

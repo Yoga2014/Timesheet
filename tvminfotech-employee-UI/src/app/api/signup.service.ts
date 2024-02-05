@@ -12,7 +12,6 @@ export class SignupService {
   constructor(private http:HttpClient, private routers:Router) { }
 
   signIn(data:any){
-    // const loginData = {email , password};
     return this.http.post(`${this.baseUrl}/login`, data)
   }
 
@@ -20,7 +19,6 @@ export class SignupService {
     const url = `${this.baseUrl}/signup`;
     return this.http.post(url, data).pipe(
       catchError((error) => {
-        console.error('Signup Error:', error);
         return throwError('Error during signup');
       })
     );

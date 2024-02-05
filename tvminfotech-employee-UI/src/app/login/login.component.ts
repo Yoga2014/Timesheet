@@ -36,7 +36,7 @@ navigateToNavbar(){
     this.signupService.signIn(formdata).subscribe(
       (res:any)=>{
         alert('Login Successful')
-        console.log(res)
+
         this.signupService.storeToken(res.token);
       
         this.route.navigate(['./home'])
