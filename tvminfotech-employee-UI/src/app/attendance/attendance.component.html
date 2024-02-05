@@ -12,7 +12,7 @@
       </select>
     
       <button type="submit">Submit</button>
-    </form>
+    </form>  
     
   
     <table>
@@ -33,10 +33,12 @@
           <td>{{ getCurrentDate() | date:'yyyy-MM-dd' }}</td>
           <td>
             {{ record.checkIn | date: 'shortTime' }}
-            <button *ngIf="!record.checkIn" (click)="markCheckIn(record)">Check-in</button>
+            <button *ngIf="!record.checkIn"[disabled]="lorh(record.attendanceType)"[ngStyle]="{'background-color': isLeave(record.attendanceType) ? 'red' : (isHoliday(record.attendanceType) ? 'grey' : '')}"
+            (click)="markCheckIn(record)">Check-in</button>
           </td>
           <td>{{ record.checkOut | date: 'shortTime' }} 
-            <button *ngIf="!record.checkOut"(click)="checkout(record)">check-Out</button>
+            <button *ngIf="!record.checkOut"[disabled]="lorh(record.attendanceType)"[ngStyle]="{'background-color': isLeave(record.attendanceType) ? 'red' : (isHoliday(record.attendanceType) ? 'grey' : '')}"
+            (click)="checkout(record)">check-Out</button>
         </td>
           
           <td>{{ record.attendanceType }}</td>

@@ -4,8 +4,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-import org.springframework.data.repository.query.Param;
-
 import com.tvmemp.model.TvmEmployee;
 
 public interface EmployeeService {
@@ -125,6 +123,8 @@ public interface EmployeeService {
 	 * @return
 	 */
 	public List<Map<String, Object>> getByEmpIdWithLogin(Integer id);
+	
+	public TvmEmployee getEmployeeIdWithImagedetails(Integer employeeid);
 
 
 	

@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.tvmemp.model.TvmEmployee;
 import com.tvmemp.service.EmployeeService;
 
+
 // TVM Employee Controller Class
 
 
@@ -139,7 +140,7 @@ public class TvmEmployeeController {
 	  * @return
 	  */
 	 @GetMapping("/getEmployeeByAssestlaptop/{laptop}")
-	    public List<TvmEmployee> getEmployeeByAssestId(@PathVariable("laptop") String laptop) {
+	    public List<TvmEmployee> getEmployeeByAssestlaptop(@PathVariable("laptop") String laptop) {
 	        return ser.findByAssestlaptop(laptop);
 	    
 	 }
@@ -175,4 +176,10 @@ public class TvmEmployeeController {
 		public List<Map<String, Object>> getByemployeeIdLog(@PathVariable("employeeid") Integer id){
 			return ser.getByEmpIdWithLogin(id);
 		}
+		
+		@GetMapping("/getByidWithPhoto/{employeeid}")
+		public TvmEmployee getWithPhoto(@PathVariable("employeeid")Integer id) {
+			return ser.getEmployeeIdWithImagedetails(id);
+		}
+		
 }

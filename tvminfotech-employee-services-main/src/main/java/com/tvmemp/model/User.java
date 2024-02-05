@@ -28,6 +28,13 @@ public class User implements UserDetails {
 
     @Column(nullable = false)
     private String password;
+    
+    private Long phone;
+    
+    @Enumerated(EnumType.STRING)
+    private Gender gender;
+    
+    private Integer age;
 
     @CreationTimestamp
     @Column(updatable = false, name = "created_at")
@@ -114,6 +121,29 @@ public class User implements UserDetails {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
+	public Long getPhone() {
+		return phone;
+	}
+
+	public void setPhone(Long phone) {
+		this.phone = phone;
+	}
+
+	public Gender getGender() {
+		return gender;
+	}
+
+	public void setGender(Gender gender) {
+		this.gender = gender;
+	}
+
+	public Integer getAge() {
+		return age;
+	}
+
+	public void setAge(Integer age) {
+		this.age = age;
+	}
     
-    // Getters and setters
 }
