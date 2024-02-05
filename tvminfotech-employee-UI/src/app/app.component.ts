@@ -17,11 +17,12 @@ export class AppComponent {
  ngDoCheck(){
   this.href = this.router.url;
   console.log('href',this.href);
-  if(this.href != '/'){
-    debugger
-    this.navView = this.emp.loginClick;
-  }else{
+  if(this.href == '/login' || this.href == '/signup' || this.href == "/"){
     this.navView = false
+  }else{
+    
+    this.navView = this.emp.loginClick;
+
   }
  }
 }

@@ -18,5 +18,7 @@ export class AttendanceService {
   return this.http.get('http://localhost:3000/attendance');
 }
 
-
+guard(){
+  return localStorage.getItem('authToken')
+}
   }

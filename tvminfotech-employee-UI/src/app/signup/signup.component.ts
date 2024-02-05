@@ -36,12 +36,10 @@ export class SignupComponent implements OnInit {
     if (this.registerForm.valid) {
       this.signupService.signUp(this.registerForm.value).subscribe(
         (res) => {
-          console.log('Signup Response:', res);
           alert('SignUp Successful');
           this.route.navigate(['/login']);
         },
         (error) => {
-          console.error('Signup Error:', error);
           alert('Error during signup');
         }
       );

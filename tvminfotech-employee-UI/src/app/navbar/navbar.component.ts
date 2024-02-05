@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SignupService } from '../api/signup.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+   constructor( private AuthService:SignupService){}
+
+
+  logoutUser(){
+   this.AuthService.signOut();
+  }
 }

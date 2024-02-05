@@ -24,36 +24,20 @@ ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
       email:['',[Validators.required]],
       password:['',[Validators.required]]
-    });
-
-   
+    });  
   
 }
 
-
-
-
-
 navigateToNavbar(){
-  //this.emp.loginClick = true;
-  // let params = {
-  //   "email": "yogarani.2014.prabhu@gmail.com",
-  //   "password": "Test@123#"
-  // };
-  // localStorage.setItem('some','Akash')
-  // this.loginService.authLogin(params).subscribe((x:any)=>{
-  //   localStorage.setItem('token',x.token);
-  //   localStorage.setItem('expiresIn',x.expiresIn);
-  // });
-  // this.route.navigate(['/home'])
-  debugger
+ 
   if(this.loginForm.valid){
     const formdata = this.loginForm.value;
 
     this.signupService.signIn(formdata).subscribe(
       (res:any)=>{
         alert('Login Successful')
-        console.log(res)
+
+        this.signupService.storeToken(res.token);
       
         this.route.navigate(['./home'])
       },
@@ -64,21 +48,8 @@ navigateToNavbar(){
   }
 }
 
-signUpClick(){
-  debugger
+signUpClick(){ 
    this.route.navigate(['./signup'])
-}
-data:any
-click(){
-  debugger
-  this.signupService.get().subscribe((res)=>
-  this.data = res
-  )
-  console.log('vgh', this.data)
-}
-
-navigateToLogin() {
-  // this.route.navigate(['/login']);
 }
 
 }
