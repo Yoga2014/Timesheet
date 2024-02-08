@@ -158,9 +158,25 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	@Override
 	public TvmEmployee getEmployeeIdWithImagedetails(Integer employeeid) {
-		return repo.getEmployeeIdWithImage(employeeid);
+		// TODO Auto-generated method stub
+		return null;
 	}
 
+	
+
+	@Override
+	public TvmEmployee saveEmployee(TvmEmployee employee) {
+		return repo.save(employee);
+	}
+
+	@Override
+	public List<Map<String, Object>> getAllEmpName() {
+		return repo.getByEmployeeNameOnly();
+	}
+
+	
+
+	
 	
 	
 

@@ -31,7 +31,7 @@ public class Employee_Assest {
 	public Employee_Assest() {
 
 	}
-	
+
 	@Enumerated(EnumType.STRING)
 	private EmployeeDescription employeedescription;
 

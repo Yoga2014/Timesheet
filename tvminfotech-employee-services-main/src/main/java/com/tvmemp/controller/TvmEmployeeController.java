@@ -1,10 +1,13 @@
 package com.tvmemp.controller;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,10 +15,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.tvmemp.model.TvmEmployee;
 import com.tvmemp.service.EmployeeService;
+
 
 
 // TVM Employee Controller Class
@@ -180,6 +187,36 @@ public class TvmEmployeeController {
 		@GetMapping("/getByidWithPhoto/{employeeid}")
 		public TvmEmployee getWithPhoto(@PathVariable("employeeid")Integer id) {
 			return ser.getEmployeeIdWithImagedetails(id);
+		}
+		
+		
+		//asset image
+		@PostMapping("/addAllEmployeeWithImage")
+		public ResponseEntity<String> addEmployee(@RequestParam("file") MultipartFile file,
+				@RequestParam("employee") String employeeJson) {
+			try {
+				// Convert JSON string to TvmEmployee object
+				ObjectMapper objectMapper = new ObjectMapper();
+				TvmEmployee employee = objectMapper.readValue(employeeJson, TvmEmployee.class);
+
+				// Set image data
+				byte[] imageData = file.getBytes();
+				employee.setImageData(imageData);
+
+				
+				// Save employee
+				ser.saveEmployee(employee);
+
+				return ResponseEntity.ok("Employee added successfully");
+			} catch (IOException e) {
+				e.printStackTrace();
+				return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to add employee");
+			}
+		}
+		
+		@GetMapping("/getAllEmp")
+		public List<Map<String, Object>> getAllEmployeeName() {
+			return ser.getAllEmpName();
 		}
 		
 }

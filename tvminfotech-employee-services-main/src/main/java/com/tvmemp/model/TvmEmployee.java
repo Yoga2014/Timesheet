@@ -9,6 +9,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.Lob;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
@@ -53,6 +54,19 @@ public class TvmEmployee {
 	@JoinColumn(name = "employeeid")
 	private List<EmployeeTechnolgyDetails> employeetechnologydetails;
 	
+	@Lob
+	@Column(name = "image_data", columnDefinition="BLOB")
+	private byte[] imageData;
+	
+	
+	public byte[] getImageData() {
+		return imageData;
+	}
+
+	public void setImageData(byte[] imageData) {
+		this.imageData = imageData;
+	}
+
 	public Integer getEmployeeId() {
 		return employeeId;
 	}

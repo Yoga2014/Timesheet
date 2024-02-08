@@ -598,3 +598,241 @@ org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-22
 org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-224]
 2024-02-02 17:00:22.876714+05:30 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-224]
+2024-02-07 17:21:13.871580+05:30 database: wrong user or password; user: "SA"
+org.h2.message.DbException: Wrong user name or password [28000-224]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.engine.Engine.openSession(Engine.java:154)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:811)
+	at org.h2.server.web.WebApp.login(WebApp.java:1039)
+	at org.h2.server.web.WebApp.process(WebApp.java:227)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:177)
+	at org.h2.server.web.JakartaWebServlet.doGet(JakartaWebServlet.java:129)
+	at org.h2.server.web.JakartaWebServlet.doPost(JakartaWebServlet.java:166)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.tvmemp.config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:54)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Wrong user name or password [28000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:522)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 97 more
+2024-02-07 17:22:07.297175+05:30 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]DELIMITER // \000d\000aCREATE PROCEDURE getImage(IN employeeid int)\000d\000aBEGIN\000d\000a\000d\000a\0009SELECT elm.employee_id, elm.imageid, elm.image, \000d\000a\0009        te.employeeid, te.employeeemail, te.employeefirstname, \000d\000a\0009        te.employeelastname, te.employeephone, te.employeeesalary, \000d\000a\0009        te.assestid FROM employee_image elm LEFT JOIN \000d\000a\0009        tvmemployee te ON elm.employee_id = te.employeeid \000d\000a\0009        WHERE te.employeeid = employeeid"; expected "DELETE, DROP"; SQL statement:
+DELIMITER // 
+CREATE PROCEDURE getImage(IN employeeid int)
+BEGIN
+
+	SELECT elm.employee_id, elm.imageid, elm.image, 
+	        te.employeeid, te.employeeemail, te.employeefirstname, 
+	        te.employeelastname, te.employeephone, te.employeeesalary, 
+	        te.assestid FROM employee_image elm LEFT JOIN 
+	        tvmemployee te ON elm.employee_id = te.employeeid 
+	        WHERE te.employeeid = employeeid [42001-224]
+2024-02-07 17:22:07.298171+05:30 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]END //\000d\000a\000d\000aDELIMITER"; SQL statement:
+END //
+
+DELIMITER [42000-224]
+2024-02-07 17:23:18.113798+05:30 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "/org/h2/dynamic/GETIMAGE.java:7: error: illegal start of type\000d\000aimport java.sql.*;\000d\000a^\000d\000a/org/h2/dynamic/GETIMAGE.java:7: error: <identifier> expected\000d\000aimport java.sql.*;\000d\000a                ^\000d\000a/org/h2/dynamic/GETIMAGE.java:8: error: illegal start of type\000d\000aimport org.h2.api.*;\000d\000a^\000d\000a/org/h2/dynamic/GETIMAGE.java:8: error: <identifier> expected\000d\000aimport org.h2.api.*;\000d\000a                  ^\000d\000a4 errors\000d\000a"; SQL statement:
+CREATE ALIAS getImage AS $$
+import java.sql.*;
+import org.h2.api.*;
+public ResultSet getImage(int employeeid) throws SQLException {
+    Connection conn = DriverManager.getConnection("jdbc:h2:~/test", "sa", "");
+    PreparedStatement ps = conn.prepareStatement(
+        "SELECT elm.employee_id, elm.imageid, elm.image, " +
+        "te.employeeid, te.employeeemail, te.employeefirstname, " +
+        "te.employeelastname, te.employeephone, te.employeeesalary, " +
+        "te.assestid " +
+        "FROM employee_image elm LEFT JOIN tvmemployee te " +
+        "ON elm.employee_id = te.employeeid " +
+        "WHERE te.employeeid = ?");
+    ps.setInt(1, employeeid);
+    return ps.executeQuery();
+}
+$$ [42000-224]
+2024-02-07 17:32:08.472393+05:30 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]DELIMITER // \000d\000aCREATE PROCEDURE getImage(IN employeeid int)\000d\000aBEGIN\000d\000a\000d\000a\0009SELECT elm.employee_id, elm.imageid, elm.image, \000d\000a\0009        te.employeeid, te.employeeemail, te.employeefirstname, \000d\000a\0009        te.employeelastname, te.employeephone, te.employeeesalary, \000d\000a\0009        te.assestid FROM employee_image elm LEFT JOIN \000d\000a\0009        tvmemployee te ON elm.employee_id = te.employeeid \000d\000a\0009        WHERE te.employeeid = employeeid"; expected "DELETE, DROP"; SQL statement:
+DELIMITER // 
+CREATE PROCEDURE getImage(IN employeeid int)
+BEGIN
+
+	SELECT elm.employee_id, elm.imageid, elm.image, 
+	        te.employeeid, te.employeeemail, te.employeefirstname, 
+	        te.employeelastname, te.employeephone, te.employeeesalary, 
+	        te.assestid FROM employee_image elm LEFT JOIN 
+	        tvmemployee te ON elm.employee_id = te.employeeid 
+	        WHERE te.employeeid = employeeid [42001-224]
+2024-02-07 17:32:08.473390+05:30 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]END //\000d\000a\000d\000aDELIMITER"; SQL statement:
+END //
+
+DELIMITER [42000-224]
+2024-02-07 17:42:07.444570+05:30 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE [*]PROCEDURE getImage(IN employeeid int)\000d\000aBEGIN\000d\000a\000d\000a\0009SELECT elm.employee_id, elm.imageid, elm.image, \000d\000a\0009        te.employeeid, te.employeeemail, te.employeefirstname, \000d\000a\0009        te.employeelastname, te.employeephone, te.employeeesalary, \000d\000a\0009        te.assestid FROM employee_image elm LEFT JOIN \000d\000a\0009        tvmemployee te ON elm.employee_id = te.employeeid \000d\000a\0009        WHERE te.employeeid = employeeid"; expected "OR REPLACE, FORCE, VIEW, MATERIALIZED, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL TEMPORARY, GLOBAL TEMPORARY, TEMPORARY, TABLE, SYNONYM, UNIQUE, SPATIAL, INDEX"; SQL statement:
+CREATE PROCEDURE getImage(IN employeeid int)
+BEGIN
+
+	SELECT elm.employee_id, elm.imageid, elm.image, 
+	        te.employeeid, te.employeeemail, te.employeefirstname, 
+	        te.employeelastname, te.employeephone, te.employeeesalary, 
+	        te.assestid FROM employee_image elm LEFT JOIN 
+	        tvmemployee te ON elm.employee_id = te.employeeid 
+	        WHERE te.employeeid = employeeid [42001-224]
+2024-02-07 17:42:07.444570+05:30 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]END"; SQL statement:
+END [42000-224]
+2024-02-07 17:42:37.926382+05:30 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE [*]PROCEDURE getImage(IN employeeid int)\000d\000aAS\000d\000aBEGIN\000d\000a\000d\000a\0009SELECT elm.employee_id, elm.imageid, elm.image, \000d\000a\0009        te.employeeid, te.employeeemail, te.employeefirstname, \000d\000a\0009        te.employeelastname, te.employeephone, te.employeeesalary, \000d\000a\0009        te.assestid FROM employee_image elm LEFT JOIN \000d\000a\0009        tvmemployee te ON elm.employee_id = te.employeeid \000d\000a\0009        WHERE te.employeeid = employeeid"; expected "OR REPLACE, FORCE, VIEW, MATERIALIZED, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL TEMPORARY, GLOBAL TEMPORARY, TEMPORARY, TABLE, SYNONYM, UNIQUE, SPATIAL, INDEX"; SQL statement:
+CREATE PROCEDURE getImage(IN employeeid int)
+AS
+BEGIN
+
+	SELECT elm.employee_id, elm.imageid, elm.image, 
+	        te.employeeid, te.employeeemail, te.employeefirstname, 
+	        te.employeelastname, te.employeephone, te.employeeesalary, 
+	        te.assestid FROM employee_image elm LEFT JOIN 
+	        tvmemployee te ON elm.employee_id = te.employeeid 
+	        WHERE te.employeeid = employeeid [42001-224]
+2024-02-07 17:42:37.927377+05:30 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]END"; SQL statement:
+END [42000-224]
+2024-02-07 17:44:09.772505+05:30 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "/org/h2/dynamic/GET_IMAGE.java:7: error: illegal start of type\000d\000aimport java.sql.*;\000d\000a^\000d\000a/org/h2/dynamic/GET_IMAGE.java:7: error: <identifier> expected\000d\000aimport java.sql.*;\000d\000a                ^\000d\000a/org/h2/dynamic/GET_IMAGE.java:8: error: illegal start of type\000d\000aimport org.h2.api.*;\000d\000a^\000d\000a/org/h2/dynamic/GET_IMAGE.java:8: error: <identifier> expected\000d\000aimport org.h2.api.*;\000d\000a                  ^\000d\000a4 errors\000d\000a"; SQL statement:
+CREATE ALIAS GET_IMAGE AS $$
+import java.sql.*;
+import org.h2.api.*;
+
+public static ResultSet getImage(int employeeid) throws SQLException {
+    Connection conn = DriverManager.getConnection("jdbc:h2:~/test", "sa", "");
+    PreparedStatement ps = conn.prepareStatement(
+        "SELECT elm.employee_id, elm.imageid, elm.image, " +
+        "te.employeeid, te.employeeemail, te.employeefirstname, " +
+        "te.employeelastname, te.employeephone, te.employeeesalary, " +
+        "te.assestid " +
+        "FROM employee_image elm LEFT JOIN tvmemployee te " +
+        "ON elm.employee_id = te.employeeid " +
+        "WHERE te.employeeid = ?");
+    ps.setInt(1, employeeid);
+    return ps.executeQuery();
+}
+$$ [42000-224]
+2024-02-07 17:54:37.138696+05:30 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]END"; SQL statement:
+END [42000-224]
+2024-02-07 17:54:55.331046+05:30 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE [*]PROCEDURE getImage(IN employeeid int)\000d\000aBEGIN\000d\000a\000d\000a\0009SELECT elm.employee_id, elm.imageid, elm.image, \000d\000a\0009        te.employeeid, te.employeeemail, te.employeefirstname, \000d\000a\0009        te.employeelastname, te.employeephone, te.employeeesalary, \000d\000a\0009        te.assestid FROM employee_image elm LEFT JOIN \000d\000a\0009        tvmemployee te ON elm.employee_id = te.employeeid \000d\000a\0009        WHERE te.employeeid = employeeid"; expected "OR REPLACE, FORCE, VIEW, MATERIALIZED, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL TEMPORARY, GLOBAL TEMPORARY, TEMPORARY, TABLE, SYNONYM, UNIQUE, SPATIAL, INDEX"; SQL statement:
+CREATE PROCEDURE getImage(IN employeeid int)
+BEGIN
+
+	SELECT elm.employee_id, elm.imageid, elm.image, 
+	        te.employeeid, te.employeeemail, te.employeefirstname, 
+	        te.employeelastname, te.employeephone, te.employeeesalary, 
+	        te.assestid FROM employee_image elm LEFT JOIN 
+	        tvmemployee te ON elm.employee_id = te.employeeid 
+	        WHERE te.employeeid = employeeid [42001-224]
+2024-02-07 17:54:55.332044+05:30 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]END"; SQL statement:
+END [42000-224]
+2024-02-08 09:37:29.611347+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-224]
+2024-02-08 12:51:14.385724+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-224]
+2024-02-08 12:57:51.219575+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-224]
+2024-02-08 12:57:51.224562+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-224]
+2024-02-08 12:57:51.225560+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-224]
+2024-02-08 12:57:51.226570+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-224]
+2024-02-08 12:57:51.226570+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-224]
+2024-02-08 12:57:51.227553+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-224]
