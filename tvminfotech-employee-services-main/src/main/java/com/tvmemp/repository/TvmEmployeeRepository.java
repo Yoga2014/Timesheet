@@ -36,19 +36,19 @@ public interface TvmEmployeeRepository extends JpaRepository<TvmEmployee, Intege
 	public List<TvmEmployee> getEmployeeBylastName(String employeelastname);
 
 	// Getting Employee details using passed out year
-    /**
-     * 
-     * @param yearofPassout
-     * @return
-     */
+	/**
+	 * 
+	 * @param yearofPassout
+	 * @return
+	 */
 	@Query(value = "SELECT t.assestid,t.employeeesalary,t.employeeemail,t.employeefirstname,t.employeelastname,t.employeephone,e.education_id, e.percentage, e.university, e.yearof_passout "
 			+ "FROM tvmemployee t LEFT JOIN employeeeducation e " + "ON t.employeeid=e.employeeid "
 			+ "WHERE e.yearof_passout=:yearofPassout", nativeQuery = true)
 
 	public List<Map<String, Object>> getEmployeeByPassout(String yearofPassout);
 
-	// Getting EmployeeAssest using employee id 
-	
+	// Getting EmployeeAssest using employee id
+
 	/**
 	 * 
 	 * @param employeeId
@@ -57,8 +57,8 @@ public interface TvmEmployeeRepository extends JpaRepository<TvmEmployee, Intege
 	@Query(value = "SELECT te.employeeid, te.employeeemail, te.employeefirstname, te.employeelastname, te.employeephone, te.employeeesalary, "
 			+ "ea.assestid, ea.charger, ea.headphone, ea.laptop FROM tvmemployee te LEFT JOIN empassest ea ON te.assestid=ea.assestid "
 			+ "WHERE te.employeeid=:employeeId", nativeQuery = true)
-    public List<TvmEmployee> findByAssestId(Integer employeeId);
-	
+	public List<TvmEmployee> findByAssestId(Integer employeeId);
+
 	/**
 	 * 
 	 * @param laptop
@@ -67,49 +67,46 @@ public interface TvmEmployeeRepository extends JpaRepository<TvmEmployee, Intege
 	@Query(value = "SELECT te.employeeid, te.employeeemail, te.employeefirstname, te.employeelastname, te.employeephone, te.employeeesalary, "
 			+ "ea.assestid, ea.charger, ea.headphone, ea.laptop FROM tvmemployee te LEFT JOIN empassest ea ON te.assestid=ea.assestid "
 			+ "WHERE ea.laptop=:laptop", nativeQuery = true)
-    public List<TvmEmployee> findByAssestlaptop(String laptop);
+	public List<TvmEmployee> findByAssestlaptop(String laptop);
 
 	/**
 	 * 
 	 * @param employeeFirstname
 	 * @return
 	 */
-	//Login, Logout Time GetByEmployeeName
-	@Query(value="SELECT te.employeeid,te.employeeemail,te.employeefirstname,"
+	// Login, Logout Time GetByEmployeeName
+	@Query(value = "SELECT te.employeeid,te.employeeemail,te.employeefirstname,"
 			+ "te.employeelastname,te.employeephone,te.employeeesalary,te.assestid,"
 			+ "el.loginid,el.logindate,el.logintime,elo.logid,elo.logoutdate,"
-			+ "elo.logouttime FROM tvmemployee te LEFT JOIN empoyeelog el "
-			+ "ON te.employeeid=el.employeeid "
+			+ "elo.logouttime FROM tvmemployee te LEFT JOIN empoyeelog el " + "ON te.employeeid=el.employeeid "
 			+ "LEFT JOIN emplogout elo ON te.employeeid=elo.employeeid "
 			+ "WHERE te.employeefirstname=:employeeFirstname", nativeQuery = true)
-    public List<Map<String, Object>> getByNameLoginDetails(String employeeFirstname);
-	
-	@Query(value="SELECT te.employeeid,te.employeeemail,te.employeefirstname,"
+	public List<Map<String, Object>> getByNameLoginDetails(String employeeFirstname);
+
+	@Query(value = "SELECT te.employeeid,te.employeeemail,te.employeefirstname,"
 			+ "te.employeelastname,te.employeephone,te.employeeesalary,te.assestid,"
 			+ "el.loginid,el.logindate,el.logintime,elo.logid,elo.logoutdate,"
-			+ "elo.logouttime FROM tvmemployee te LEFT JOIN empoyeelog el "
-			+ "ON te.employeeid=el.employeeid "
+			+ "elo.logouttime FROM tvmemployee te LEFT JOIN empoyeelog el " + "ON te.employeeid=el.employeeid "
 			+ "LEFT JOIN emplogout elo ON te.employeeid=elo.employeeid "
 			+ "WHERE te.employeeid=:employeeId", nativeQuery = true)
-    public List<Map<String, Object>> getByEmpIdLogio(Integer employeeId);
-	
+	public List<Map<String, Object>> getByEmpIdLogio(Integer employeeId);
+
 	/**
 	 * 
 	 * @param techname
 	 * @return
 	 */
-	@Query(value = "SELECT te.employeeid,te.employeeemail,te.employeefirstname,"+
-			"te.employeelastname,te.employeephone,te.employeeesalary,te.assestid," +
-	        "b.projectid, b.projectname, a.techid, a.techname " +
-	        "FROM tvmemployee te " +
-	        "LEFT JOIN employee_technolgy_details a ON te.employeeid = a.employeeid " +
-	        "LEFT JOIN employee_project_details b ON te.employeeid = b.employeeid " +
-	        "WHERE a.techname = :techname", nativeQuery = true)
-      public List<TvmEmployee> getUsersByTechnology(@Param("techname") String techname);
-	
 	@Query(value = "SELECT te.employeeid,te.employeeemail,te.employeefirstname,"
-			+ "te.employeelastname,te.employeephone,te.employeeesalary,te.assestid, ei.imageid,ei.image"
-			+ " FROM tvmemployee te LEFT JOIN employee_image ei ON te.employeeid=ei.imageid "
-			+ "WHERE te.employeeid=:employeeid", nativeQuery = true)
-	public TvmEmployee getEmployeeIdWithImage(Integer employeeid);
+			+ "te.employeelastname,te.employeephone,te.employeeesalary,te.assestid,"
+			+ "b.projectid, b.projectname, a.techid, a.techname " + "FROM tvmemployee te "
+			+ "LEFT JOIN employee_technolgy_details a ON te.employeeid = a.employeeid "
+			+ "LEFT JOIN employee_project_details b ON te.employeeid = b.employeeid "
+			+ "WHERE a.techname = :techname", nativeQuery = true)
+	public List<TvmEmployee> getUsersByTechnology(@Param("techname") String techname);
+
+	@Query(value = "select getImage()", nativeQuery = true)
+	public TvmEmployee getEmployeeIdWithImage();
+	
+	@Query(value = "SELECT employeeid,employeefirstname,employeelastname from tvmemployee",nativeQuery = true)
+	public List<Map<String, Object>> getByEmployeeNameOnly();
 }

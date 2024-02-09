@@ -127,8 +127,11 @@ public interface EmployeeService {
 	public TvmEmployee getEmployeeIdWithImagedetails(Integer employeeid);
 
 
-	
+	public  TvmEmployee saveEmployee(TvmEmployee employee);
 
+	public List<Map<String, Object>> getAllEmpName();
+	
+     
 
 
 
